@@ -24,6 +24,24 @@ collections:
   docs:
     output: true
     permalink: /docs/:path/
+  process:
+    output: true
+    permalink: /process/:path/
+  master-data:
+    output: true
+    permalink: /master-data/:path/
+  purchasing:
+    output: true
+    permalink: /purchasing/:path/
+  inventory:
+    output: true
+    permalink: /inventory/:path/
+  invoice:
+    output: true
+    permalink: /invoice/:path/
+  config-guide:
+    output: true
+    permalink: /config-guide/:path/
 
 defaults:
   - scope: { path: "_posts", type: "posts" }
@@ -32,6 +50,18 @@ defaults:
     values: { layout: "page" }
   - scope: { path: "index.md" }
     values: { layout: "home" }
+  - scope: { path: "_process",     type: "process"     }
+    values: { layout: "page" }
+  - scope: { path: "_master-data", type: "master-data" }
+    values: { layout: "page" }
+  - scope: { path: "_purchasing",  type: "purchasing"  }
+    values: { layout: "page" }
+  - scope: { path: "_inventory",   type: "inventory"   }
+    values: { layout: "page" }
+  - scope: { path: "_invoice",     type: "invoice"     }
+    values: { layout: "page" }
+  - scope: { path: "_config-guide", type: "config-guide" }
+    values: { layout: "page" }
 
 markdown: kramdown
 highlighter: rouge

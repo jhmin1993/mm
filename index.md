@@ -9,14 +9,16 @@ SAP Materials Management(MM) 모듈을 하루 30분씩 체계적으로 공부하
 
 ---
 
-## 주요 학습 영역
+## 학습 섹션
 
-| 영역 | 링크 | 설명 |
-|------|------|------|
-| 구매 관리 | [Procurement](/mm/docs/procurement/overview/) | 구매 요청, 발주, 입고 프로세스 |
-| 재고 관리 | [Inventory](/mm/docs/inventory/overview/) | 재고 이동, 실사, 평가 |
-| 송장 검증 | [Invoice Verification](/mm/docs/invoice-verification/overview/) | 3-way matching, LIV |
-| 기준 정보 | [Master Data](/mm/docs/master-data/overview/) | 자재 마스터, 공급업체 마스터 |
+| 섹션 | 설명 |
+|------|------|
+| [MM 전체 프로세스 + 3일 커리큘럼](/mm/process/index/) | 전체 흐름 & 단기 학습 계획 |
+| [기준 정보 (자재관리)](/mm/master-data/index/) | Material Master, BP(Vendor), Info Record |
+| [구매관리](/mm/purchasing/index/) | PR → PO → GR → 특수조달 |
+| [재고관리](/mm/inventory/index/) | Movement Type, 재고 유형, 실사 |
+| [송장 검증](/mm/invoice/index/) | 3-way Matching, MIRO |
+| [SPRO 설정 가이드](/mm/config-guide/index/) | MM 모듈 Customizing 경로 정리 |
 
 ---
 
