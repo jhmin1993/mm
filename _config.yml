@@ -20,6 +20,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+collections_dir: docs
+
 collections:
   docs:
     output: true
@@ -50,17 +52,17 @@ defaults:
     values: { layout: "page" }
   - scope: { path: "index.md" }
     values: { layout: "home" }
-  - scope: { path: "_process",     type: "process"     }
+  - scope: { type: "process"      }
     values: { layout: "page" }
-  - scope: { path: "_master-data", type: "master-data" }
+  - scope: { type: "master-data"  }
     values: { layout: "page" }
-  - scope: { path: "_purchasing",  type: "purchasing"  }
+  - scope: { type: "purchasing"   }
     values: { layout: "page" }
-  - scope: { path: "_inventory",   type: "inventory"   }
+  - scope: { type: "inventory"    }
     values: { layout: "page" }
-  - scope: { path: "_invoice",     type: "invoice"     }
+  - scope: { type: "invoice"      }
     values: { layout: "page" }
-  - scope: { path: "_config-guide", type: "config-guide" }
+  - scope: { type: "config-guide" }
     values: { layout: "page" }
 
 markdown: kramdown
