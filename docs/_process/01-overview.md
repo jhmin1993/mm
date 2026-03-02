@@ -21,10 +21,10 @@ SAP MM(Materials Management)은 구매에서 재고관리, 송장 검증까지 *
 
 ```mermaid
 graph TD
-    Client --> CC["Company Code\n법인 단위, 재무제표 기준"]
-    CC --> Plant["Plant\n생산/운영 단위 (공장, 물류센터)"]
-    Plant --> SLoc["Storage Location\n창고 내 구체적 위치"]
-    POrg["Purchasing Organization\n구매 조건 관리 단위"] --> PGroup["Purchasing Group\n담당자/팀 단위"]
+    Client --> CC["Company Code<br/>법인 단위, 재무제표 기준"]
+    CC --> Plant["Plant<br/>생산/운영 단위 (공장, 물류센터)"]
+    Plant --> SLoc["Storage Location<br/>창고 내 구체적 위치"]
+    POrg["Purchasing Organization<br/>구매 조건 관리 단위"] --> PGroup["Purchasing Group<br/>담당자/팀 단위"]
 ```
 
 ### 핵심 조직 단위 설명

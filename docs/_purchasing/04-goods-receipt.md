@@ -24,6 +24,7 @@ flowchart LR
 ```
 
 ### Action 선택
+
 | Action | 설명 |
 |--------|------|
 | Goods Receipt | 입고 |
@@ -33,6 +34,7 @@ flowchart LR
 | Cancellation | 취소 |
 
 ### Reference Document 선택
+
 | 참조 | 설명 |
 |------|------|
 | Purchase Order | PO 참조 입고 (가장 일반적) |
@@ -45,10 +47,11 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    A["MIGO\nGoods Receipt + PO"] --> B["PO 번호 입력"] --> C["아이템 자동 로드"] --> D["수량/보관위치 확인"] --> E["전기 (Post)"]
+    A["MIGO<br/>Goods Receipt + PO"] --> B["PO 번호 입력"] --> C["아이템 자동 로드"] --> D["수량/보관위치 확인"] --> E["전기 (Post)"]
 ```
 
 ### 입력 항목
+
 | 필드 | 설명 |
 |------|------|
 | Movement Type | 101 (PO 기준 입고) |

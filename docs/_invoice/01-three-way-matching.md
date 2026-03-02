@@ -11,8 +11,8 @@ nav_order: 1
 
 ```mermaid
 flowchart LR
-    PO["PO (구매 발주)\n수량/단가"] <--> GR["GR (입고)\n실제 수령"]
-    GR <--> INV["Invoice (공급업체 청구서)\n청구 금액/수량"]
+    PO["PO (구매 발주)<br/>수량/단가"] <--> GR["GR (입고)<br/>실제 수령"]
+    GR <--> INV["Invoice (공급업체 청구서)<br/>청구 금액/수량"]
 ```
 
 모든 수량과 금액이 허용 오차 범위 내에서 일치해야 전기 가능합니다.
@@ -22,6 +22,7 @@ flowchart LR
 ## MIRO 화면 구조
 
 ### 헤더 (Header)
+
 | 필드 | 설명 |
 |------|------|
 | Transaction | Invoice / Credit Memo / Subsequent Debit 등 |

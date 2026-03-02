@@ -17,9 +17,9 @@ Material Master는 SAP MM의 **핵심 기준 정보**입니다.
 ```mermaid
 graph TD
     Client --> CC["Company Code"]
-    CC --> Plant["Plant\n자재 대부분 데이터 단위"]
+    CC --> Plant["Plant<br/>자재 대부분 데이터 단위"]
     Plant --> SLoc["Storage Location"]
-    POrg["Purchasing Org\n구매 조건 관리 단위"]
+    POrg["Purchasing Org<br/>구매 조건 관리 단위"]
 ```
 
 ---

@@ -45,7 +45,7 @@ PO 참조 입고 (Mvt 101):
 
 ```mermaid
 flowchart LR
-    A["PP 생산 오더"] --> B["자재 불출\nMIGO / Mvt 261"] --> C["재고 감소 + 비용 이전"]
+    A["PP 생산 오더"] --> B["자재 불출<br/>MIGO / Mvt 261"] --> C["재고 감소 + 비용 이전"]
 ```
 
 | Movement Type | 설명 |
@@ -68,7 +68,7 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    A["SD 납품 오더"] --> B["피킹"] --> C["출고 전기\nMvt 601"] --> D["재고 감소 + 매출 원가"]
+    A["SD 납품 오더"] --> B["피킹"] --> C["출고 전기<br/>Mvt 601"] --> D["재고 감소 + 매출 원가"]
 ```
 
 | Movement Type | 설명 |
@@ -92,9 +92,9 @@ flowchart LR
 ```mermaid
 flowchart TD
     PP["PP 생산 오더"] -->|"Mvt 261 (자재 출고)"| MM["MM 재고 관리"]
-    Proc["MM 구매 프로세스\n(PR - PO - GR)"] -->|"Mvt 101 (입고)"| MM
-    MM -->|회계 전표| FI["FI 재무회계\n(GR/IR 정산 - 지급)"]
-    SD["SD 판매\n(고객 납품, Mvt 601)"] -->|납품| MM
+    Proc["MM 구매 프로세스<br/>(PR - PO - GR)"] -->|"Mvt 101 (입고)"| MM
+    MM -->|회계 전표| FI["FI 재무회계<br/>(GR/IR 정산 - 지급)"]
+    SD["SD 판매<br/>(고객 납품, Mvt 601)"] -->|납품| MM
 ```
 
 ---

@@ -13,7 +13,7 @@ SAP MM(Materials Management) 모듈의 전체 흐름을 파악하고, 각 세부
 
 ```mermaid
 flowchart LR
-    A["구매 요청 (PR)\nME51N"] --> B["RFQ/견적\nME41"] --> C["구매 발주 (PO)\nME21N"] --> D["입고 (GR)\nMIGO"] --> E["송장 검증 (IV)\nMIRO"] --> F["대금 지급\nFI"]
+    A["구매 요청 (PR)<br/>ME51N"] --> B["RFQ/견적<br/>ME41"] --> C["구매 발주 (PO)<br/>ME21N"] --> D["입고 (GR)<br/>MIGO"] --> E["송장 검증 (IV)<br/>MIRO"] --> F["대금 지급<br/>FI"]
 ```
 
 ---

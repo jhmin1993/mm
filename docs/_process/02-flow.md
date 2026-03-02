@@ -9,13 +9,13 @@ nav_order: 2
 
 ```mermaid
 flowchart TD
-    A["수요 발생"] --> B["PR (구매 요청)\nME51N"]
-    B -->|승인| C["RFQ (견적 요청)\nME41 - 선택"]
-    C -->|견적 비교| D["PO (구매 발주)\nME21N"]
-    D --> E["GR (입고)\nMIGO / Mvt 101"]
+    A["수요 발생"] --> B["PR (구매 요청)<br/>ME51N"]
+    B -->|승인| C["RFQ (견적 요청)<br/>ME41 - 선택"]
+    C -->|견적 비교| D["PO (구매 발주)<br/>ME21N"]
+    D --> E["GR (입고)<br/>MIGO / Mvt 101"]
     E --> F["QI (품질 검사) - 선택"]
-    F --> G["IV (송장 검증)\nMIRO"]
-    G --> H["FI 지급\nF110"]
+    F --> G["IV (송장 검증)<br/>MIRO"]
+    G --> H["FI 지급<br/>F110"]
 ```
 
 ---

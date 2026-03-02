@@ -30,8 +30,8 @@ flowchart LR
 
 ```mermaid
 graph TD
-    POrg["Purchasing Organization\n구매 조직"] --> PGroup["Purchasing Group\n구매 그룹"]
-    PGroup --> Plant["Plant\n조달 대상 플랜트"]
+    POrg["Purchasing Organization<br/>구매 조직"] --> PGroup["Purchasing Group<br/>구매 그룹"]
+    PGroup --> Plant["Plant<br/>조달 대상 플랜트"]
 ```
 
 - **구매 조직**: 공급업체와의 계약/협상 단위

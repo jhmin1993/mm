@@ -16,7 +16,7 @@ nav_order: 5
 
 ```mermaid
 flowchart LR
-    A["원자재 출고\nMvt 541"] --> B["공급업체 가공"] --> C["완제품 입고\nMvt 101 / Item Cat. L"]
+    A["원자재 출고<br/>Mvt 541"] --> B["공급업체 가공"] --> C["완제품 입고<br/>Mvt 101 / Item Cat. L"]
 ```
 
 ### PO 설정
@@ -24,6 +24,7 @@ flowchart LR
 - 아이템 하단 **Component** 탭: 제공할 원자재 목록
 
 ### Movement Types
+
 | Mvt | 설명 |
 |-----|------|
 | 541 | 외주 공급업체로 원자재 출고 |
@@ -40,7 +41,7 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    A["공급업체 재고 입고\n(무상)"] --> B["자사 창고 보관"] --> C["사용 시 GI\n자동 채무 발생"]
+    A["공급업체 재고 입고<br/>(무상)"] --> B["자사 창고 보관"] --> C["사용 시 GI<br/>자동 채무 발생"]
 ```
 
 ### PO 설정
@@ -61,10 +62,11 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    A["송신 플랜트"] --> B["STO PO (UB)"] --> C["출고\nMvt 351"] --> D["수신 플랜트 입고\nMvt 101"]
+    A["송신 플랜트"] --> B["STO PO (UB)"] --> C["출고<br/>Mvt 351"] --> D["수신 플랜트 입고<br/>Mvt 101"]
 ```
 
 ### STO 유형
+
 | 유형 | 방법 |
 |------|------|
 | 1단계 | 직접 이동 (Transfer Posting, Mvt 301) |

@@ -15,11 +15,11 @@ Repository 이름이 `mm`이므로 `baseurl: /mm` 설정이 필수였다.
 
 ## 결정 사항 (Decisions Made)
 
-- 결정 1: **Jekyll + minima 테마** 선택 — GitHub Pages 기본 지원 테마로 별도 빌드 설정 없이 바로 배포 가능. SAP 학습 노트 특성상 심플한 레이아웃이 적합.
-- 결정 2: **`baseurl: /mm`** 설정 — 저장소 이름이 `mm`이고 `jhmin1993.github.io`는 다른 용도일 수 있으므로, 프로젝트 페이지 URL 구조(`/mm/`)에 맞춰 설정.
-- 결정 3: **CLAUDE.md 지시문 방식**으로 플랜 저장 규칙 구현 — 훅(hook)보다 안정적이며, 세션 시작 시 자동으로 컨텍스트가 로드됨.
-- 결정 4: **`docs/` 컬렉션** 추가 — 포스트(날짜별 학습 일지) 외에 SAP MM 개념 정리 문서를 별도 경로(`/docs/`)로 관리하기 위해.
-- 결정 5: **플러그인 3종** (jekyll-feed, jekyll-seo-tag, jekyll-sitemap) — GitHub Pages 허용 목록 내 플러그인만 사용해 배포 오류 방지.
+- 결정 1: **Jekyll + minima 테마** 선택 - GitHub Pages 기본 지원 테마로 별도 빌드 설정 없이 바로 배포 가능. SAP 학습 노트 특성상 심플한 레이아웃이 적합.
+- 결정 2: **`baseurl: /mm`** 설정 - 저장소 이름이 `mm`이고 `jhmin1993.github.io`는 다른 용도일 수 있으므로, 프로젝트 페이지 URL 구조(`/mm/`)에 맞춰 설정.
+- 결정 3: **CLAUDE.md 지시문 방식**으로 플랜 저장 규칙 구현 - 훅(hook)보다 안정적이며, 세션 시작 시 자동으로 컨텍스트가 로드됨.
+- 결정 4: **`docs/` 컬렉션** 추가 - 포스트(날짜별 학습 일지) 외에 SAP MM 개념 정리 문서를 별도 경로(`/docs/`)로 관리하기 위해.
+- 결정 5: **플러그인 3종** (jekyll-feed, jekyll-seo-tag, jekyll-sitemap) - GitHub Pages 허용 목록 내 플러그인만 사용해 배포 오류 방지.
 
 ## 현재 상태 (Current State)
 
