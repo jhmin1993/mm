@@ -114,7 +114,8 @@ flowchart LR
 
 ---
 
-## 필드 → 마스터 연관
+<details>
+<summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |
 |---------|-----------|-------------|------|
@@ -123,6 +124,8 @@ flowchart LR
 | Movement Type (541) | 이동 유형 커스터마이징 | SPRO → MM → IM → Movement Types (OMJJ) | 외주 출고 자동 결정 |
 | Consignment 정산 | 위탁 소비 기록 | MRKO (위탁 정산 T-code) | 월말 정산 실행 |
 | Document Type (UB) | PO 문서 유형 | SPRO → MM → Purchasing → Define Document Types for PO | STO용 |
+
+</details>
 
 ---
 

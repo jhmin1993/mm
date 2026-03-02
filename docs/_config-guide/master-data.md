@@ -7,7 +7,8 @@ nav_order: 2
 
 ## 조직 구조 설정
 
-```
+<div class="callout callout-note" markdown="0">
+<pre>
 SPRO
 └── Materials Management
     └── General Settings
@@ -20,7 +21,8 @@ SPRO
             ├── Assign Plant → Company Code
             ├── Assign Purch. Org → Company Code
             └── Assign Purch. Org → Plant
-```
+</pre>
+</div>
 
 ### 주요 설정 내용
 
@@ -36,7 +38,8 @@ SPRO
 
 ## 자재 마스터 설정
 
-```
+<div class="callout callout-note" markdown="0">
+<pre>
 SPRO
 └── Materials Management
     └── Material Master
@@ -48,7 +51,8 @@ SPRO
         │   └── Define Screen Layout for MM     ← 뷰별 필수/선택 필드
         └── Settings for Key Fields
             └── Define Units of Measurement     ← CUNI (단위 관리)
-```
+</pre>
+</div>
 
 ### 자재 유형 (Material Type) 설정 포인트
 
@@ -64,7 +68,8 @@ SPRO
 
 ## 평가 및 계정 결정 (Valuation)
 
-```
+<div class="callout callout-note" markdown="0">
+<pre>
 SPRO
 └── Materials Management
     └── Valuation and Account Assignment
@@ -76,7 +81,8 @@ SPRO
         │   └── Configure Automatic Postings    ← OBYC: 계정 키별 G/L 계정 매핑
         └── Split Valuation
             └── Activate Split Valuation        ← 동일 자재 복수 평가
-```
+</pre>
+</div>
 
 ### OBYC 주요 계정 키
 

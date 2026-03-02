@@ -104,7 +104,8 @@ MMBE 실행 시 표시되는 주요 열:
 
 ---
 
-## 필드 → 마스터 연관
+<details>
+<summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |
 |---------|-----------|-------------|------|
@@ -113,6 +114,8 @@ MMBE 실행 시 표시되는 주요 열:
 | Valuation Type | 분할 평가 설정 | SPRO → MM → Valuation → Split Valuation | 동일 자재 복수 평가 시 |
 | Plant / Storage Location | 조직 구조 | SPRO → Enterprise Structure → Logistics | MMBE 조회 기준 |
 | QM 연계 (QI 재고) | QM 검사 계획 | QM 모듈 → 검사 유형 설정 | GR 시 자동 QI 이동 |
+
+</details>
 
 ---
 

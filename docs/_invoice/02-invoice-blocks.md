@@ -83,10 +83,8 @@ flowchart LR
 
 ## 3-way Matching 오차 허용 설정
 
-SPRO 설정 경로:
-```
-MM → Logistics Invoice Verification → Invoice Block → Set Tolerance Limits
-```
+> SPRO → MM → Logistics Invoice Verification → Invoice Block → Set Tolerance Limits
+{: .callout .callout-note}
 
 | 허용 키 | 적용 |
 |--------|------|
@@ -107,7 +105,8 @@ MM → Logistics Invoice Verification → Invoice Block → Set Tolerance Limits
 
 ---
 
-## 필드 → 마스터 연관
+<details>
+<summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |
 |---------|-----------|-------------|------|
@@ -115,6 +114,8 @@ MM → Logistics Invoice Verification → Invoice Block → Set Tolerance Limits
 | Block Reason Code | 블록 사유 마스터 | SPRO → MM → LIV → Invoice Block → Define Blocking Reason | R, Q, D, W 등 |
 | Payment Block | MIRO 화면 수동 입력 | - | 수동 블록 시 담당자 입력 |
 | ERS 설정 | PO / Info Record | ME21N → Item → Invoice 탭 / ME11 Control Data | ERS 체크 시 자동 정산 |
+
+</details>
 
 ---
 

@@ -97,7 +97,8 @@ flowchart LR
 
 ---
 
-## 필드 → 마스터 연관
+<details>
+<summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |
 |---------|-----------|-------------|------|
@@ -107,6 +108,8 @@ flowchart LR
 | Net Price (ME47 입력) | 공급업체 제시 견적 | 수동 입력 | 가격 비교(ME49) 기준 데이터 |
 | Quotation Deadline | 수동 입력 | - | 마감 후 자동 만료 |
 | Incoterms (ME47) | 공급업체 제시 조건 | BP Purch. Org 기본값 | 견적별 변경 가능 |
+
+</details>
 
 ---
 

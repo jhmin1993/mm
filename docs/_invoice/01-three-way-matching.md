@@ -42,17 +42,17 @@ flowchart LR
 ## 매칭 방법
 
 ### PO 기반 매칭 (GR-Based IV 미설정)
-```
-PO 단가 × Invoice 수량 = 검증 금액
-```
+
+> PO 단가 x Invoice 수량 = 검증 금액
+{: .callout .callout-note}
 
 ### GR 기반 매칭 (GR-Based IV 설정 - 권장)
-```
-GR 수량 × PO 단가 = 검증 금액
-(입고된 만큼만 청구 가능)
-```
+
+> GR 수량 x PO 단가 = 검증 금액 (입고된 만큼만 청구 가능)
+{: .callout .callout-important}
 
 > **GR-Based IV**: 공급업체 마스터 또는 PO에서 설정. 입고 전 송장 처리 방지.
+{: .callout .callout-note}
 
 ---
 
@@ -73,15 +73,18 @@ GR 수량 × PO 단가 = 검증 금액
 
 MIRO 전기 시 자동 생성:
 
-```
-차변: GR/IR 정산 계정 (WRX)   ← GR 시 대변된 계정 정산
-차변: 세금 계정 (VST 등)       ← VAT
-대변: 공급업체 채무 (Vendor)   ← 지급 채무 확정
-```
-
-가격 차이 발생 시:
-```
-차변/대변: 가격 차이 계정 (PRD)  ← 표준 원가 자재에서 발생
+```mermaid
+flowchart TD
+    subgraph MIRO["MIRO 전기"]
+        direction TB
+        D1["차변: GR/IR 정산 계정 (WRX)"]
+        D2["차변: 세금 계정 (VST 등)"]
+        C1["대변: 공급업체 채무 (Vendor)"]
+    end
+    subgraph PRD["가격 차이 발생 시"]
+        P1["차변/대변: 가격 차이 계정 (PRD)<br/>표준 원가 자재에서 발생"]
+    end
+    MIRO --> PRD
 ```
 
 ---
@@ -119,7 +122,8 @@ MIRO 전기 시 자동 생성:
 
 ---
 
-## 필드 → 마스터 연관
+<details>
+<summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |
 |---------|-----------|-------------|------|
@@ -128,6 +132,8 @@ MIRO 전기 시 자동 생성:
 | Tax Code | 세금 코드 마스터 | SPRO → FI → Tax → Define Tax Codes | 수동 선택 필수 |
 | 허용 오차 (자동 블록) | 허용 오차 설정 | SPRO → MM → LIV → Invoice Block → Set Tolerance Limits | 시스템 자동 비교 |
 | 채무 계정 (자동) | 공급업체 기준 정보 | BP → Company Code → Reconciliation Account | 자동 전기 |
+
+</details>
 
 ---
 

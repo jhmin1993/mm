@@ -7,7 +7,8 @@ nav_order: 4
 
 ## 전체 구조
 
-```
+<div class="callout callout-note" markdown="0">
+<pre>
 SPRO
 └── Materials Management
     └── Inventory Management and Physical Inventory
@@ -26,7 +27,8 @@ SPRO
             ├── Define Default Values
             ├── Set Tolerance Limits for PI     ← 실사 허용 오차
             └── Activate Cycle Counting         ← CC 실사 활성화
-```
+</pre>
+</div>
 
 ---
 
@@ -58,9 +60,8 @@ Movement Type은 재고 이동의 모든 속성을 결정합니다.
 
 ## GR 허용 오차 설정
 
-```
-SPRO → MM → IM → Goods Receipt → Set Tolerance Limits for GR
-```
+> SPRO → MM → IM → Goods Receipt → Set Tolerance Limits for GR
+{: .callout .callout-note}
 
 | 오차 유형 | 설명 | 설정 단위 |
 |---------|------|---------|
@@ -69,6 +70,7 @@ SPRO → MM → IM → Goods Receipt → Set Tolerance Limits for GR
 | 최종 납품 (Final Delivery) | 이후 추가 입고 불가 처리 | 체크 여부 |
 
 > 자재 마스터 Purchasing View의 Over/Under Delivery Tolerance가 우선 적용됩니다.
+{: .callout .callout-note}
 
 ---
 
@@ -76,18 +78,16 @@ SPRO → MM → IM → Goods Receipt → Set Tolerance Limits for GR
 
 ### 실사 허용 오차
 
-```
-SPRO → MM → IM → Physical Inventory → Set Tolerance Limits
-```
+> SPRO → MM → IM → Physical Inventory → Set Tolerance Limits
+{: .callout .callout-note}
 
 - 금액 기준으로 설정 (절대 금액 또는 %)
 - 허용 오차 초과 시 차이 전기 전 승인 필요
 
 ### Cycle Counting 설정
 
-```
-SPRO → MM → IM → Physical Inventory → Activate Cycle Counting
-```
+> SPRO → MM → IM → Physical Inventory → Activate Cycle Counting
+{: .callout .callout-note}
 
 - A/B/C 분류별 실사 주기 설정 (일수)
 - 자재 마스터 MRP1 뷰의 CC Indicator와 연계
@@ -98,9 +98,8 @@ SPRO → MM → IM → Physical Inventory → Activate Cycle Counting
 
 GR/GI 시 자동으로 G/L 계정을 결정하는 핵심 설정.
 
-```
-SPRO → MM → Valuation and Account Assignment → Account Determination → OBYC
-```
+> SPRO → MM → Valuation and Account Assignment → Account Determination → OBYC
+{: .callout .callout-note}
 
 ### 주요 설정 조합
 

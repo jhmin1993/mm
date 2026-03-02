@@ -7,7 +7,8 @@ nav_order: 5
 
 ## 전체 구조
 
-```
+<div class="callout callout-note" markdown="0">
+<pre>
 SPRO
 └── Materials Management
     └── Logistics Invoice Verification (LIV)
@@ -22,7 +23,8 @@ SPRO
         │   └── OBYC: Configure Automatic Postings ← WRX, BSX 계정
         └── Tax
             └── (FI 공통) Define Tax Codes      ← 세금 코드 정의
-```
+</pre>
+</div>
 
 ---
 
@@ -30,9 +32,8 @@ SPRO
 
 가장 중요한 LIV 설정입니다. 오차 초과 시 자동 블록이 발생합니다.
 
-```
-SPRO → MM → LIV → Invoice Block → Set Tolerance Limits
-```
+> SPRO → MM → LIV → Invoice Block → Set Tolerance Limits
+{: .callout .callout-note}
 
 ### 허용 오차 키 상세
 
@@ -56,9 +57,8 @@ SPRO → MM → LIV → Invoice Block → Set Tolerance Limits
 
 ## 블록 사유 정의
 
-```
-SPRO → MM → LIV → Invoice Block → Define Blocking Reasons
-```
+> SPRO → MM → LIV → Invoice Block → Define Blocking Reasons
+{: .callout .callout-note}
 
 | 블록 코드 | 설명 | 자동/수동 |
 |---------|------|---------|
@@ -81,37 +81,40 @@ SPRO → MM → LIV → Invoice Block → Define Blocking Reasons
 3. **PO Item** (ME21N): Invoice 탭 → GR-Based IV 체크
 
 > PO Item 설정이 가장 우선 적용됩니다.
+{: .callout .callout-important}
 
 ---
 
 ## 자동 계정 결정 - MIRO 관련
 
-```
-SPRO → MM → LIV → Automatic Account Determination → OBYC
-```
+> SPRO → MM → LIV → Automatic Account Determination → OBYC
+{: .callout .callout-note}
 
 ### MIRO 전기 시 계정 흐름
 
-```
-MIRO 전기:
-  차변: GR/IR 정산 계정 (WRX)   ← GR 시 대변된 계정 정산
-  차변: 세금 계정 (VST 등)       ← 세금 코드에 따라
-  대변: 공급업체 채무 계정        ← BP의 Reconciliation Account
-
-가격 차이 발생 시:
-  차변/대변: 가격 차이 계정 (PRD) ← 표준 원가(S) 자재에서 발생
+```mermaid
+flowchart LR
+    subgraph MIRO["MIRO 전기"]
+        direction TB
+        D1["차변: GR/IR 정산 계정 (WRX)"]
+        D2["차변: 세금 계정 (VST 등)"]
+        C1["대변: 공급업체 채무 계정"]
+    end
+    subgraph PRD["가격 차이 발생 시"]
+        P1["차변/대변: 가격 차이 계정 (PRD)<br/>표준 원가(S) 자재에서 발생"]
+    end
+    MIRO --> PRD
 ```
 
 ---
 
 ## 세금 코드 (Tax Code) 정의
 
-```
-SPRO → Financial Accounting → Tax on Sales/Purchases → Basic Settings
-    → Define Tax Codes for Sales and Purchases
-```
+> SPRO → Financial Accounting → Tax on Sales/Purchases → Basic Settings → Define Tax Codes for Sales and Purchases
+{: .callout .callout-note}
 
 > 세금 코드는 FI 공통 설정입니다. MM에서는 MIRO 입력 시 세금 코드를 선택합니다.
+{: .callout .callout-note}
 
 | 세금 코드 | 설명 | 세율 |
 |---------|------|------|
@@ -123,10 +126,8 @@ SPRO → Financial Accounting → Tax on Sales/Purchases → Basic Settings
 
 ## ERS (Evaluated Receipt Settlement) 설정
 
-```
-SPRO → MM → LIV → Incoming Invoice → GR-Based Invoice Verification
-                → Activate ERS for Vendors / Info Records
-```
+> SPRO → MM → LIV → Incoming Invoice → GR-Based Invoice Verification → Activate ERS for Vendors / Info Records
+{: .callout .callout-note}
 
 - ERS 활성화 시: MIRO 없이 GR 기준으로 자동 송장 생성
 - **T-code MRRL**: ERS 실행

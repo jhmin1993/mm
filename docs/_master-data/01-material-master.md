@@ -52,6 +52,7 @@ MM01 실행 시 필요한 **뷰(View)**를 선택하여 데이터 입력:
 | 거래품 | HAWA | Trading Goods |
 
 > **자재 유형**이 중요한 이유: 재고 관리 여부, 평가 클래스, 구매 가능 여부 등을 결정합니다.
+{: .callout .callout-important}
 
 ---
 
@@ -116,7 +117,8 @@ MM01 실행 시 필요한 **뷰(View)**를 선택하여 데이터 입력:
 
 ---
 
-## 필드 → 마스터 연관
+<details>
+<summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |
 |---------|-----------|-------------|------|
@@ -127,6 +129,8 @@ MM01 실행 시 필요한 **뷰(View)**를 선택하여 데이터 입력:
 | Valuation Class | 평가 클래스 | SPRO → MM → Valuation → Account Determination | 계정 자동 결정 핵심 키 |
 | MRP Type | MRP 유형 | SPRO → MM → MRP → Planning → Define MRP Types | MRP 실행 방식 결정 |
 | Plant | 조직 구조 | SPRO → Enterprise Structure → Logistics | 뷰 확장 시 기준 단위 |
+
+</details>
 
 ---
 
