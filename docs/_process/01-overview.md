@@ -95,7 +95,8 @@ graph LR
 
 ---
 
-## 필드 → 마스터 연관
+<details>
+<summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |
 |---------|-----------|-------------|------|
@@ -104,6 +105,8 @@ graph LR
 | Storage Location | 보관 위치 마스터 | SPRO → Enterprise Structure → Logistics → Define SLoc | OX09 |
 | Purch. Organization | 구매 조직 마스터 | SPRO → Enterprise Structure → Purchasing → Define Purch. Org | OX08 |
 | Purch. Group | 구매 그룹 마스터 | SPRO → MM → Purchasing → Create Purch. Groups | OME4 |
+
+</details>
 
 ---
 

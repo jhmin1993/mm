@@ -20,21 +20,43 @@ flowchart LR
 
 ## 학습 섹션 연결
 
-| 섹션 | 링크 | 설명 |
-|------|------|------|
-| MM 모듈 개요 | [01 - 개요](/mm/process/01-overview/) | 조직 구조, 핵심 개념 |
-| P2P 전체 흐름 | [02 - 흐름](/mm/process/02-flow/) | 프로세스 단계별 상세 |
-| 타 모듈 통합 | [03 - 통합](/mm/process/03-integration/) | FI, PP, SD 연계 |
-| 기준 정보 | [Master Data](/mm/master-data/index/) | 자재, 공급업체, Info Record |
-| 구매관리 | [Purchasing](/mm/purchasing/index/) | PR → PO → GR |
-| 재고관리 | [Inventory](/mm/inventory/index/) | Movement Type, 재고 유형 |
-| 송장 검증 | [Invoice](/mm/invoice/index/) | 3-way Matching, MIRO |
+<div class="card-grid" markdown="0">
+  <div class="card card-process">
+    <h4><a href="{{ '/process/01-overview/' | relative_url }}">MM 모듈 개요</a></h4>
+    <p>조직 구조, 핵심 개념</p>
+  </div>
+  <div class="card card-process">
+    <h4><a href="{{ '/process/02-flow/' | relative_url }}">P2P 전체 흐름</a></h4>
+    <p>프로세스 단계별 상세</p>
+  </div>
+  <div class="card card-process">
+    <h4><a href="{{ '/process/03-integration/' | relative_url }}">타 모듈 통합</a></h4>
+    <p>FI, PP, SD 연계</p>
+  </div>
+  <div class="card card-master">
+    <h4><a href="{{ '/master-data/index/' | relative_url }}">기준 정보</a></h4>
+    <p>자재, 공급업체, Info Record</p>
+  </div>
+  <div class="card card-purchasing">
+    <h4><a href="{{ '/purchasing/index/' | relative_url }}">구매관리</a></h4>
+    <p>PR - PO - GR</p>
+  </div>
+  <div class="card card-inventory">
+    <h4><a href="{{ '/inventory/index/' | relative_url }}">재고관리</a></h4>
+    <p>Movement Type, 재고 유형</p>
+  </div>
+  <div class="card card-invoice">
+    <h4><a href="{{ '/invoice/index/' | relative_url }}">송장 검증</a></h4>
+    <p>3-way Matching, MIRO</p>
+  </div>
+</div>
 
 ---
 
 ## 3일 SAP MM 기초 프로세스 커리큘럼
 
 > 하루 30~40분. 개념 읽기 + 블로그 정리. 실 SAP 없어도 가능.
+{: .callout .callout-tip}
 
 ### Day 1: 기준 정보 (자재관리) - 모든 프로세스의 출발점
 

@@ -107,7 +107,8 @@ PO는 공급업체와의 **공식 구매 계약 문서**입니다.
 
 ---
 
-## 필드 → 마스터 연관
+<details>
+<summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |
 |---------|-----------|-------------|------|
@@ -120,6 +121,8 @@ PO는 공급업체와의 **공식 구매 계약 문서**입니다.
 | Purchasing Group | 자재 마스터 | MM01 Purchasing View | 기본값 |
 | Plant | 조직 구조 | SPRO → Enterprise Structure | |
 | Storage Location | 자재 마스터 | MM01 General Plant Storage | |
+
+</details>
 
 ---
 

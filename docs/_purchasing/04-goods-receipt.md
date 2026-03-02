@@ -79,10 +79,9 @@ flowchart LR
 
 PO 기준 입고 시 자동 생성:
 
-```
-차변: 재고 계정 (BSX)        ← Valuation Class로 결정
-대변: GR/IR 정산 계정 (WRX)  ← 공통 계정 (미지급 채무)
-```
+> **차변**: 재고 계정 (BSX) - Valuation Class로 결정<br>
+> **대변**: GR/IR 정산 계정 (WRX) - 공통 계정 (미지급 채무)
+{: .callout .callout-note}
 
 - 표준 가격(S) 자재: PO 가격과 차이 발생 시 PRD 계정에 차이 반영
 - 이동 평균(V) 자재: 재고 단가 자동 재계산
@@ -121,7 +120,8 @@ PO 기준 입고 시 자동 생성:
 
 ---
 
-## 필드 → 마스터 연관
+<details>
+<summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |
 |---------|-----------|-------------|------|
@@ -130,6 +130,8 @@ PO 기준 입고 시 자동 생성:
 | Storage Location | 자재 마스터 / 수동 | MM01 General Plant Storage | 기본값 |
 | Batch | 배치 기준 정보 | MSC1N (Batch 생성) | 배치 관리 활성화 시 |
 | 재고 계정 (자동) | 평가 클래스 | MM01 Accounting 1 → Valuation Class | OBYC 자동 계정 결정 |
+
+</details>
 
 ---
 

@@ -107,7 +107,8 @@ flowchart LR
 
 ---
 
-## 필드 → 마스터 연관
+<details>
+<summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |
 |---------|-----------|-------------|------|
@@ -115,6 +116,8 @@ flowchart LR
 | Number Range | 번호 범위 설정 | SPRO → MM → Purchasing → Define Number Ranges for PO | 채번 방식 결정 |
 | Release Strategy (승인) | 릴리스 전략 | SPRO → MM → Purchasing → Authorization → Release Procedure | 금액/조직 기준 |
 | Payment Terms | 지급 조건 마스터 | SPRO → FI → AR/AP → Define Payment Terms | IV 후 지급 스케줄 결정 |
+
+</details>
 
 ---
 

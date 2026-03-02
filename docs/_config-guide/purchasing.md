@@ -7,7 +7,8 @@ nav_order: 3
 
 ## 전체 구조
 
-```
+<div class="callout callout-note" markdown="0">
+<pre>
 SPRO
 └── Materials Management
     └── Purchasing
@@ -30,7 +31,8 @@ SPRO
             │   ├── For Vendor                  ← 공급업체 스키마 그룹
             │   └── For Purchasing Organization
             └── Assign Pricing Procedure        ← 스키마 그룹 → 가격 절차 연결
-```
+</pre>
+</div>
 
 ---
 
@@ -60,9 +62,8 @@ SPRO
 | WBS 요소 | P | PS 프로젝트 구매 | WBS 요소 코드 |
 | 자산 | A | 유형 자산 취득 | 자산 번호 |
 
-```
-SPRO → MM → Purchasing → Account Assignment → Define Account Assignment Categories
-```
+> SPRO → MM → Purchasing → Account Assignment → Define Account Assignment Categories
+{: .callout .callout-note}
 
 ---
 
@@ -79,28 +80,27 @@ SPRO → MM → Purchasing → Account Assignment → Define Account Assignment 
 
 ### 가격 결정 절차 설정 경로
 
-```
-SPRO
-└── MM → Purchasing → Conditions
-    ├── 1. Define Condition Types    (PB00, RA01 등 정의)
-    ├── 2. Define Pricing Procedures (절차별 조건 순서 지정)
-    ├── 3. Define Schema Groups
-    │       Vendor: 공급업체 그룹별 다른 절차 적용
-    └── 4. Assign Pricing Procedures (Purch.Org + Schema Group → 절차)
+```mermaid
+flowchart TD
+    A["1. Define Condition Types<br/>PB00, RA01 등 정의"] --> B["2. Define Pricing Procedures<br/>절차별 조건 순서 지정"]
+    B --> C["3. Define Schema Groups<br/>Vendor: 공급업체 그룹별 다른 절차 적용"]
+    C --> D["4. Assign Pricing Procedures<br/>Purch.Org + Schema Group → 절차"]
 ```
 
 ---
 
 ## 승인 절차 (Release Procedure)
 
-```
+<div class="callout callout-note" markdown="0">
+<pre>
 SPRO → MM → Purchasing → Authorization → Release Procedure
 ├── Define Release Groups           ← 릴리스 그룹 정의
 ├── Define Release Codes            ← 릴리스 코드 (담당자/직급)
 ├── Define Release Indicators       ← 상태 표시 (블록/릴리스)
 ├── Define Release Strategies       ← 조건 (금액, 조직 등)
 └── Workflow Settings               ← 알림 설정
-```
+</pre>
+</div>
 
 ### 릴리스 전략 조건 예시
 

@@ -90,7 +90,8 @@ flowchart LR
 
 ---
 
-## 필드 → 마스터 연관
+<details>
+<summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |
 |---------|-----------|-------------|------|
@@ -101,6 +102,8 @@ flowchart LR
 | Account Assignment Category | 계정 지정 카테고리 | SPRO → MM → Purchasing → Account Assignment → Define AA Categories | K, F, P, A 유형 |
 | Delivery Date | 수동 입력 | - | 자재 마스터 Planned Deliv. Time 참고 |
 | Document Type | 문서 유형 마스터 | SPRO → MM → Purchasing → Define Document Types for PR | NB (표준) |
+
+</details>
 
 ---
 

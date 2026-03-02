@@ -29,6 +29,7 @@ BP 실행 → **역할(Role)** 선택:
 | FI Vendor (회계) | FLVN01 | 재조정 계정, 지급 조건 |
 
 > BP에서 구매 조직 데이터는: BP → "Vendor: Purch. Organization" 탭
+{: .callout .callout-tip}
 
 ---
 
@@ -122,7 +123,8 @@ BP 실행 → **역할(Role)** 선택:
 
 ---
 
-## 필드 → 마스터 연관
+<details>
+<summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |
 |---------|-----------|-------------|------|
@@ -132,6 +134,8 @@ BP 실행 → **역할(Role)** 선택:
 | Incoterms | 인코텀즈 마스터 | SPRO → MM → Purchasing → Define Incoterms | PO 헤더에 기본값 |
 | Schema Group (Vendor) | 가격 조건 스키마 그룹 | SPRO → MM → Purchasing → Conditions → Schema Groups | 가격 결정 스키마 연결 |
 | GR-Based IV | BP 설정 값 | BP → Vendor: Purch. Org → GR-Based IV 체크 | PO Invoice 탭에도 반영 |
+
+</details>
 
 ---
 

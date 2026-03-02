@@ -101,7 +101,8 @@ ABC 분류에 따라 실사 주기를 다르게 설정:
 
 ---
 
-## 필드 → 마스터 연관
+<details>
+<summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |
 |---------|-----------|-------------|------|
@@ -110,6 +111,8 @@ ABC 분류에 따라 실사 주기를 다르게 설정:
 | 허용 오차 (금액 기준) | 실사 허용 오차 설정 | SPRO → MM → Physical Inventory → Set Tolerance Limits | 초과 시 재계수 또는 승인 |
 | Cycle Counting Indicator | 자재 마스터 | MM01 MRP1 View → CC Indicator | A/B/C 분류로 주기 자동 결정 |
 | 재고 조정 계정 (자동) | 계정 결정 | SPRO → MM → IM → Account Determination → GBB/INV | 차이 전기 시 자동 계정 |
+
+</details>
 
 ---
 
