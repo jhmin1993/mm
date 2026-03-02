@@ -23,9 +23,6 @@ plugins:
 collections_dir: docs
 
 collections:
-  docs:
-    output: true
-    permalink: /docs/:path/
   process:
     output: true
     permalink: /process/:path/
@@ -48,8 +45,6 @@ collections:
 defaults:
   - scope: { path: "_posts", type: "posts" }
     values: { layout: "post", author: "jhmin1993" }
-  - scope: { path: "docs", type: "docs" }
-    values: { layout: "page" }
   - scope: { path: "index.md" }
     values: { layout: "home" }
   - scope: { type: "process"      }
@@ -74,3 +69,4 @@ exclude:
   - .gitignore
   - vendor/
   - .claude/
+  - CLAUDE.md
