@@ -1,0 +1,43 @@
+title: "SAP MM 공부 노트"
+description: "SAP Materials Management 모듈 학습 일지 - 하루 30분씩"
+url: "https://jhmin1993.github.io"
+baseurl: "/mm"
+repository: "jhmin1993/mm"
+author:
+  name: "jhmin1993"
+
+theme: minima
+lang: ko
+
+minima:
+  skin: classic
+  date_format: "%Y년 %m월 %d일"
+  social_links:
+    - { platform: github, user_url: "https://github.com/jhmin1993" }
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+defaults:
+  - scope: { path: "_posts", type: "posts" }
+    values: { layout: "post", author: "jhmin1993" }
+  - scope: { path: "docs", type: "docs" }
+    values: { layout: "page" }
+  - scope: { path: "index.md" }
+    values: { layout: "home" }
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - vendor/
