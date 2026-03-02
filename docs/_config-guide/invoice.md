@@ -48,9 +48,9 @@ SPRO → MM → LIV → Invoice Block → Set Tolerance Limits
 
 | 키 | 상한 | 하한 | 의미 |
 |----|------|------|------|
-| PP | 2% | — | 단가가 PO보다 2% 초과 시 블록 |
-| BD | 10,000 | — | 총액 차이 1만원 초과 시 블록 |
-| ST | — | 1,000 | 1천원 미만 차이는 자동 처리 |
+| PP | 2% | - | 단가가 PO보다 2% 초과 시 블록 |
+| BD | 10,000 | - | 총액 차이 1만원 초과 시 블록 |
+| ST | - | 1,000 | 1천원 미만 차이는 자동 처리 |
 
 ---
 
@@ -84,7 +84,7 @@ SPRO → MM → LIV → Invoice Block → Define Blocking Reasons
 
 ---
 
-## 자동 계정 결정 — MIRO 관련
+## 자동 계정 결정 - MIRO 관련
 
 ```
 SPRO → MM → LIV → Automatic Account Determination → OBYC

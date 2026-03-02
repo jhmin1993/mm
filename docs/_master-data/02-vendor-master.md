@@ -82,11 +82,11 @@ BP 실행 → **역할(Role)** 선택:
 
 | 코드 | 설명 |
 |------|------|
-| EXW | Ex Works — 공장 인도 |
-| FOB | Free On Board — 선적 항구 인도 |
-| CIF | Cost, Insurance, Freight — 운임·보험 포함 |
-| DAP | Delivered at Place — 목적지 인도 |
-| DDP | Delivered Duty Paid — 관세 포함 목적지 인도 |
+| EXW | Ex Works - 공장 인도 |
+| FOB | Free On Board - 선적 항구 인도 |
+| CIF | Cost, Insurance, Freight - 운임·보험 포함 |
+| DAP | Delivered at Place - 목적지 인도 |
+| DDP | Delivered Duty Paid - 관세 포함 목적지 인도 |
 
 ---
 
@@ -106,7 +106,7 @@ BP 실행 → **역할(Role)** 선택:
 
 1. **BP = XK01 + FK01의 통합**: 하나의 화면에서 구매·회계 데이터 모두 관리
 2. **재조정 계정**: 모든 공급업체 채무가 이 계정으로 집계됨 (FI 관점)
-3. **GR-Based IV**: 체크 시 GR 수량 기준으로만 송장 검증 — 3-way matching 강제
+3. **GR-Based IV**: 체크 시 GR 수량 기준으로만 송장 검증 - 3-way matching 강제
 4. **지급 조건**: `ZB30` = "30일 내 지급", `ZB001` = "즉시 지급" 등 커스텀 정의
 
 ---

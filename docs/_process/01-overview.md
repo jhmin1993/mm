@@ -1,5 +1,5 @@
 ---
-title: "MM 모듈 개요 — 조직 구조와 핵심 개념"
+title: "MM 모듈 개요 - 조직 구조와 핵심 개념"
 nav_order: 1
 ---
 
@@ -19,14 +19,12 @@ SAP MM(Materials Management)은 구매에서 재고관리, 송장 검증까지 *
 
 ## 조직 구조 (Organizational Structure)
 
-```
-Client
-└── Company Code (회사 코드)          ← 법인 단위, 재무제표 기준
-    └── Plant (플랜트)                 ← 생산/운영 단위 (공장, 물류센터)
-        └── Storage Location (보관 위치) ← 창고 내 구체적 위치
-
-Purchasing Organization (구매 조직)   ← 구매 조건 관리 단위
-└── Purchasing Group (구매 그룹)       ← 담당자/팀 단위
+```mermaid
+graph TD
+    Client --> CC["Company Code\n법인 단위, 재무제표 기준"]
+    CC --> Plant["Plant\n생산/운영 단위 (공장, 물류센터)"]
+    Plant --> SLoc["Storage Location\n창고 내 구체적 위치"]
+    POrg["Purchasing Organization\n구매 조건 관리 단위"] --> PGroup["Purchasing Group\n담당자/팀 단위"]
 ```
 
 ### 핵심 조직 단위 설명
@@ -44,13 +42,14 @@ Purchasing Organization (구매 조직)   ← 구매 조건 관리 단위
 
 ## MM과 다른 모듈의 연계
 
-```
-SD (판매)  ←→  MM (자재관리)  ←→  PP (생산)
-                    ↕
-               FI (재무회계)
-               CO (관리회계)
-               WM (창고관리)
-               QM (품질관리)
+```mermaid
+graph LR
+    SD["SD (판매)"] <--> MM["MM (자재관리)"]
+    MM <--> PP["PP (생산)"]
+    MM <--> FI["FI (재무회계)"]
+    MM <--> CO["CO (관리회계)"]
+    MM <--> WM["WM (창고관리)"]
+    MM <--> QM["QM (품질관리)"]
 ```
 
 - **MM-FI**: GR 시 자동 회계 전표 생성 (BSX, WRX 계정)

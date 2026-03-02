@@ -1,5 +1,5 @@
 ---
-title: "SPRO 설정 가이드 — MM 모듈 Customizing 맵"
+title: "SPRO 설정 가이드 - MM 모듈 Customizing 맵"
 nav_order: 1
 ---
 

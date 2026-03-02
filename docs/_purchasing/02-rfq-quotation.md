@@ -14,8 +14,9 @@ RFQ는 공급업체에 **가격 및 납기 조건을 요청**하는 문서입니
 
 ## RFQ 프로세스
 
-```
-RFQ 생성 (ME41) → 공급업체 발송 → 견적 수신 → 견적 입력 (ME47) → 가격 비교 (ME49) → PO 전환
+```mermaid
+flowchart LR
+    A["RFQ 생성\nME41"] --> B["공급업체 발송"] --> C["견적 수신"] --> D["견적 입력\nME47"] --> E["가격 비교\nME49"] --> F["PO 전환"]
 ```
 
 ---
@@ -103,7 +104,7 @@ RFQ 생성 (ME41) → 공급업체 발송 → 견적 수신 → 견적 입력 (M
 | Vendor | 공급업체 기준 정보 | BP (Business Partner) | F4 검색 도움 |
 | Purch. Organization | 조직 구조 | SPRO → Enterprise Structure → Purchasing | |
 | Net Price (ME47 입력) | 공급업체 제시 견적 | 수동 입력 | 가격 비교(ME49) 기준 데이터 |
-| Quotation Deadline | 수동 입력 | — | 마감 후 자동 만료 |
+| Quotation Deadline | 수동 입력 | - | 마감 후 자동 만료 |
 | Incoterms (ME47) | 공급업체 제시 조건 | BP Purch. Org 기본값 | 견적별 변경 가능 |
 
 ---

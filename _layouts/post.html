@@ -5,3 +5,16 @@ layout: default
 <p class="text-gray">{{ page.date | date: "%Y년 %m월 %d일" }}</p>
 
 {{ content }}
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  document.querySelectorAll('pre code.language-mermaid').forEach(el => {
+    const pre = el.parentElement;
+    const newPre = document.createElement('pre');
+    newPre.classList.add('mermaid');
+    newPre.textContent = el.textContent;
+    pre.replaceWith(newPre);
+  });
+  mermaid.initialize({ startOnLoad: false, theme: 'default' });
+  await mermaid.run();
+</script>

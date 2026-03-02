@@ -14,8 +14,9 @@ nav_order: 5
 ### 개념
 원자재를 공급업체에 제공하고, 가공된 완제품/반제품을 돌려받는 방식.
 
-```
-원자재 출고 (Mvt 541) → 공급업체 가공 → 완제품 입고 (Mvt 101, Item Cat. L)
+```mermaid
+flowchart LR
+    A["원자재 출고\nMvt 541"] --> B["공급업체 가공"] --> C["완제품 입고\nMvt 101 / Item Cat. L"]
 ```
 
 ### PO 설정
@@ -37,8 +38,9 @@ nav_order: 5
 ### 개념
 공급업체 소유 재고를 자사 창고에 보관하다가, 실제 사용 시 비용 발생.
 
-```
-공급업체 재고 입고 (무상) → 자사 창고 보관 → 사용 시 GI + 자동 채무 발생
+```mermaid
+flowchart LR
+    A["공급업체 재고 입고\n(무상)"] --> B["자사 창고 보관"] --> C["사용 시 GI\n자동 채무 발생"]
 ```
 
 ### PO 설정
@@ -57,8 +59,9 @@ nav_order: 5
 ### 개념
 자사 내 한 플랜트에서 다른 플랜트로 재고 이동.
 
-```
-송신 플랜트 → STO PO (UB) → 출고 (Mvt 351) → 수신 플랜트 입고 (Mvt 101)
+```mermaid
+flowchart LR
+    A["송신 플랜트"] --> B["STO PO (UB)"] --> C["출고\nMvt 351"] --> D["수신 플랜트 입고\nMvt 101"]
 ```
 
 ### STO 유형
@@ -113,8 +116,8 @@ nav_order: 5
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |
 |---------|-----------|-------------|------|
-| Item Category | 수동 선택 | — | L(외주), K(위탁), P(파이프라인) |
-| Component (외주 L) | BOM (Bill of Materials) | CS01 (BOM 생성) — PP-MM 연계 | 제공 원자재 자동 로드 |
+| Item Category | 수동 선택 | - | L(외주), K(위탁), P(파이프라인) |
+| Component (외주 L) | BOM (Bill of Materials) | CS01 (BOM 생성) - PP-MM 연계 | 제공 원자재 자동 로드 |
 | Movement Type (541) | 이동 유형 커스터마이징 | SPRO → MM → IM → Movement Types (OMJJ) | 외주 출고 자동 결정 |
 | Consignment 정산 | 위탁 소비 기록 | MRKO (위탁 정산 T-code) | 월말 정산 실행 |
 | Document Type (UB) | PO 문서 유형 | SPRO → MM → Purchasing → Define Document Types for PO | STO용 |

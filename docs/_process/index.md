@@ -11,9 +11,9 @@ SAP MM(Materials Management) 모듈의 전체 흐름을 파악하고, 각 세부
 
 ## MM 모듈 핵심 프로세스 (P2P)
 
-```
-구매 요청 (PR) → RFQ/견적 → 구매 발주 (PO) → 입고 (GR) → 송장 검증 (IV) → 대금 지급
-   ME51N          ME41        ME21N             MIGO          MIRO            FI
+```mermaid
+flowchart LR
+    A["구매 요청 (PR)\nME51N"] --> B["RFQ/견적\nME41"] --> C["구매 발주 (PO)\nME21N"] --> D["입고 (GR)\nMIGO"] --> E["송장 검증 (IV)\nMIRO"] --> F["대금 지급\nFI"]
 ```
 
 ---
@@ -22,9 +22,9 @@ SAP MM(Materials Management) 모듈의 전체 흐름을 파악하고, 각 세부
 
 | 섹션 | 링크 | 설명 |
 |------|------|------|
-| MM 모듈 개요 | [01 — 개요](/mm/process/01-overview/) | 조직 구조, 핵심 개념 |
-| P2P 전체 흐름 | [02 — 흐름](/mm/process/02-flow/) | 프로세스 단계별 상세 |
-| 타 모듈 통합 | [03 — 통합](/mm/process/03-integration/) | FI, PP, SD 연계 |
+| MM 모듈 개요 | [01 - 개요](/mm/process/01-overview/) | 조직 구조, 핵심 개념 |
+| P2P 전체 흐름 | [02 - 흐름](/mm/process/02-flow/) | 프로세스 단계별 상세 |
+| 타 모듈 통합 | [03 - 통합](/mm/process/03-integration/) | FI, PP, SD 연계 |
 | 기준 정보 | [Master Data](/mm/master-data/index/) | 자재, 공급업체, Info Record |
 | 구매관리 | [Purchasing](/mm/purchasing/index/) | PR → PO → GR |
 | 재고관리 | [Inventory](/mm/inventory/index/) | Movement Type, 재고 유형 |
@@ -36,7 +36,7 @@ SAP MM(Materials Management) 모듈의 전체 흐름을 파악하고, 각 세부
 
 > 하루 30~40분. 개념 읽기 + 블로그 정리. 실 SAP 없어도 가능.
 
-### Day 1: 기준 정보 (자재관리) — 모든 프로세스의 출발점
+### Day 1: 기준 정보 (자재관리) - 모든 프로세스의 출발점
 
 - [ ] MM 모듈 개요 읽기 (조직 구조: Plant / Company Code / Purch. Org)
       → [MM 전체 구조](/mm/process/01-overview/)

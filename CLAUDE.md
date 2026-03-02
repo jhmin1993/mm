@@ -37,8 +37,8 @@ status: active | completed | superseded
 ## 결정 사항 (Decisions Made)
 [이 세션에서 내린 설계/구현 결정과 그 이유.
 새 세션에서 "왜 이렇게 했지?"를 설명하는 섹션]
-- 결정 1: [선택한 방법] — 이유: [...]
-- 결정 2: [선택한 방법] — 이유: [...]
+- 결정 1: [선택한 방법] - 이유: [...]
+- 결정 2: [선택한 방법] - 이유: [...]
 
 ## 현재 상태 (Current State)
 [세션 종료 시점의 실제 상태. 구현 중 플랜이면 진행률도 기록]
@@ -68,7 +68,7 @@ status: active | completed | superseded
 
 기존 플랜을 수정할 때:
 1. `.claude/plans/`에서 해당 파일을 Read로 읽는다
-2. **현재 상태(Current State) 섹션을 최신화**한다 — 완료 항목 체크, 이슈 업데이트
+2. **현재 상태(Current State) 섹션을 최신화**한다 - 완료 항목 체크, 이슈 업데이트
 3. 필요한 내용을 변경한다
 4. Revision History에 새 행 추가:
    - Rev 번호: 마이너 변경 +0.1, 대규모 재작성 +1.0
@@ -87,3 +87,4 @@ status: active | completed | superseded
 - 포스트 파일명: `YYYY-MM-DD-sap-mm-study-day-NN.md`
 - 커밋 메시지: 영어, 명령형 ("Add Day 05 study notes")
 - GitHub Pages 지원 플러그인만 사용: jekyll-feed, jekyll-seo-tag, jekyll-sitemap
+- 엠대시(U+2014) 사용 금지. 대신 하이픈(`-`) 또는 콜론(`:`)을 사용한다

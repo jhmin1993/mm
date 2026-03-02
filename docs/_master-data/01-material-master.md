@@ -14,13 +14,12 @@ Material Master는 SAP MM의 **핵심 기준 정보**입니다.
 
 ## 조직 구조
 
-```
-Client
-└── Company Code
-    └── Plant              ← 자재 대부분 데이터 단위
-        └── Storage Location
-
-Purchasing Org             ← 구매 조건 관리 단위
+```mermaid
+graph TD
+    Client --> CC["Company Code"]
+    CC --> Plant["Plant\n자재 대부분 데이터 단위"]
+    Plant --> SLoc["Storage Location"]
+    POrg["Purchasing Org\n구매 조건 관리 단위"]
 ```
 
 ---
@@ -44,7 +43,7 @@ MM01 실행 시 필요한 **뷰(View)**를 선택하여 데이터 입력:
 
 | 유형 | 코드 | 설명 |
 |------|------|------|
-| 원자재 | ROH | Raw Material — 재고 관리 |
+| 원자재 | ROH | Raw Material - 재고 관리 |
 | 반제품 | HALB | Semi-Finished |
 | 완제품 | FERT | Finished Product |
 | 소모품 | HIBE | Operating Supplies |
@@ -63,10 +62,10 @@ MM01 실행 시 필요한 **뷰(View)**를 선택하여 데이터 입력:
 | 필드 | 설명 |
 |------|------|
 | Purchasing Group | 구매 담당 그룹 (PR/PO 기본값) |
-| Planned Deliv. Time | 계획 납기일 (일수) — MRP 계산 기준 |
+| Planned Deliv. Time | 계획 납기일 (일수) - MRP 계산 기준 |
 | Over Delivery Tolerance | 과다 납품 허용 비율 (%) |
 | Under Delivery Tolerance | 과소 납품 허용 비율 (%) |
-| GR Processing Time | 입고 처리 소요일수 — MRP 기준 |
+| GR Processing Time | 입고 처리 소요일수 - MRP 기준 |
 | Order Unit | 발주 단위 (기본 단위와 다를 수 있음) |
 | Source List | 소스 리스트 필수 여부 |
 
@@ -76,7 +75,7 @@ MM01 실행 시 필요한 **뷰(View)**를 선택하여 데이터 입력:
 
 | 필드 | 설명 |
 |------|------|
-| Valuation Class | 평가 클래스 — 자동 계정 결정 기준 |
+| Valuation Class | 평가 클래스 - 자동 계정 결정 기준 |
 | Price Control | V (이동평균) / S (표준) |
 | Moving Avg. Price | 현재 이동 평균 단가 |
 | Standard Price | 표준 단가 |

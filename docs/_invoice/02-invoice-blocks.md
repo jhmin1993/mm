@@ -36,8 +36,11 @@ SAP가 자동으로 설정하는 블록:
 
 ## 블록 해제 프로세스 (MRBR)
 
-```
-MRBR 실행 → 블록 송장 목록 조회 → 검토 → 해제 또는 유지
+```mermaid
+flowchart LR
+    A["MRBR 실행"] --> B["블록 송장 목록 조회"] --> C["검토"] --> D{"해제 또는 유지"}
+    D -->|해제| E["지급 대상으로 전환"]
+    D -->|유지| F["블록 유지"]
 ```
 
 ### MRBR 화면
@@ -67,7 +70,7 @@ MRBR 실행 → 블록 송장 목록 조회 → 검토 → 해제 또는 유지
 
 ---
 
-## 자동 지급 정산 (ERS — Evaluated Receipt Settlement)
+## 자동 지급 정산 (ERS - Evaluated Receipt Settlement)
 
 블록의 반대 개념으로, 검증을 생략하고 GR 기준으로 자동 송장 생성:
 
@@ -110,7 +113,7 @@ MM → Logistics Invoice Verification → Invoice Block → Set Tolerance Limits
 |---------|-----------|-------------|------|
 | Tolerance Key (PP/BD/DQ/ST) | 허용 오차 설정 | SPRO → MM → LIV → Invoice Block → Set Tolerance Limits | 초과 시 자동 블록 |
 | Block Reason Code | 블록 사유 마스터 | SPRO → MM → LIV → Invoice Block → Define Blocking Reason | R, Q, D, W 등 |
-| Payment Block | MIRO 화면 수동 입력 | — | 수동 블록 시 담당자 입력 |
+| Payment Block | MIRO 화면 수동 입력 | - | 수동 블록 시 담당자 입력 |
 | ERS 설정 | PO / Info Record | ME21N → Item → Invoice 탭 / ME11 Control Data | ERS 체크 시 자동 정산 |
 
 ---

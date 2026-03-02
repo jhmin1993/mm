@@ -5,14 +5,15 @@ nav_order: 1
 
 # 송장 검증 (Logistics Invoice Verification)
 
-P2P 프로세스의 마지막 단계 — 공급업체 청구서를 검증하고 지급 채무를 확정합니다.
+P2P 프로세스의 마지막 단계 - 공급업체 청구서를 검증하고 지급 채무를 확정합니다.
 
 ---
 
 ## 송장 검증 흐름
 
-```
-공급업체 청구서 수신 → MIRO 입력 → 3-way Matching → 전기 → FI 지급
+```mermaid
+flowchart LR
+    A["공급업체 청구서 수신"] --> B["MIRO 입력"] --> C["3-way Matching"] --> D["전기"] --> E["FI 지급"]
 ```
 
 ---
