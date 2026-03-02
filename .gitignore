@@ -4,3 +4,8 @@ _site/
 .jekyll-metadata
 Gemfile.lock
 vendor/
+
+# Claude Code - plans만 추적, 나머지 무시
+.claude/*
+!.claude/plans/
+!.claude/plans/**

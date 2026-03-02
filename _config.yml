@@ -41,3 +41,4 @@ exclude:
   - Gemfile.lock
   - .gitignore
   - vendor/
+  - .claude/
