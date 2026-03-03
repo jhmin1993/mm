@@ -8,6 +8,7 @@ author:
 
 remote_theme: pages-themes/primer@v0.6.0
 lang: ko
+timezone: Asia/Seoul
 
 plugins:
   - jekyll-remote-theme
@@ -36,9 +37,12 @@ collections:
   config-guide:
     output: true
     permalink: /config-guide/:path/
+  enterprise-structure:
+    output: true
+    permalink: /enterprise-structure/:path/
 
 defaults:
-  - scope: { path: "_posts", type: "posts" }
+  - scope: { path: "docs/_posts", type: "posts" }
     values: { layout: "post", author: "jhmin1993" }
   - scope: { path: "index.md" }
     values: { layout: "default" }
@@ -54,6 +58,11 @@ defaults:
     values: { layout: "page" }
   - scope: { type: "config-guide" }
     values: { layout: "page" }
+  - scope: { type: "enterprise-structure" }
+    values: { layout: "page" }
+
+future: true
+permalink: pretty
 
 markdown: kramdown
 kramdown:

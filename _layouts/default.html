@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ko' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 모바일 상단 헤더 (640px 이하) -->
+  <header class="mobile-header">
+    <a href="{{ '/' | relative_url }}">📚 {{ site.title }}</a>
+  </header>
+
+  <div class="layout">
+
+    <!-- 사이드바 -->
+    <aside class="sidebar">
+      <div class="sidebar-title">
+        <a href="{{ '/' | relative_url }}">📚 SAP MM</a>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="{{ '/' | relative_url }}"
+           class="nav-item {% if page.url == '/' %}active{% endif %}">
+          🏠 홈
+        </a>
+        <div class="nav-section">학습 문서</div>
+        <a href="{{ '/enterprise-structure/index/' | relative_url }}"
+           class="nav-item {% if page.url contains '/enterprise-structure/' %}active{% endif %}">
+          🏢 기업 구조
+        </a>
+        <a href="{{ '/process/index/' | relative_url }}"
+           class="nav-item {% if page.url contains '/process/' %}active{% endif %}">
+          🔄 MM 전체 프로세스
+        </a>
+        <a href="{{ '/master-data/index/' | relative_url }}"
+           class="nav-item {% if page.url contains '/master-data/' %}active{% endif %}">
+          📦 기준 정보
+        </a>
+        <a href="{{ '/purchasing/index/' | relative_url }}"
+           class="nav-item {% if page.url contains '/purchasing/' %}active{% endif %}">
+          🛒 구매관리
+        </a>
+        <a href="{{ '/inventory/index/' | relative_url }}"
+           class="nav-item {% if page.url contains '/inventory/' %}active{% endif %}">
+          📊 재고관리
+        </a>
+        <a href="{{ '/invoice/index/' | relative_url }}"
+           class="nav-item {% if page.url contains '/invoice/' %}active{% endif %}">
+          🧾 송장 검증
+        </a>
+        <a href="{{ '/config-guide/index/' | relative_url }}"
+           class="nav-item {% if page.url contains '/config-guide/' %}active{% endif %}">
+          ⚙️ SPRO 설정 가이드
+        </a>
+        <div class="nav-section">학습 일지</div>
+        <a href="{{ '/study-log/' | relative_url }}"
+           class="nav-item {% if page.url == '/study-log/' %}active{% endif %}">
+          📋 전체 일지 보기
+        </a>
+        {% for post in site.posts limit:5 %}
+        <a href="{{ post.url | relative_url }}"
+           class="nav-item {% if page.url == post.url %}active{% endif %}">
+          📝 {{ post.title }}
+        </a>
+        {% endfor %}
+      </nav>
+    </aside>
+
+    <!-- 본문 -->
+    <main class="main-content">
+      <article class="page-content markdown-body">
+        {{ content }}
+      </article>
+    </main>
+
+  </div>
+
+</body>
+</html>

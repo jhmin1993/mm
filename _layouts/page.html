@@ -13,6 +13,32 @@ layout: default
     newPre.textContent = el.textContent;
     pre.replaceWith(newPre);
   });
-  mermaid.initialize({ startOnLoad: false, theme: 'default' });
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'base',
+    flowchart: {
+      curve: 'basis',
+      nodeSpacing: 48,
+      rankSpacing: 56,
+      padding: 16,
+      useMaxWidth: false,
+    },
+    themeVariables: {
+      primaryColor: '#DBEAFE',
+      primaryTextColor: '#1e3a5f',
+      primaryBorderColor: '#3B82F6',
+      lineColor: '#3B82F6',
+      secondaryColor: '#EFF6FF',
+      tertiaryColor: '#F0F9FF',
+      background: '#ffffff',
+      fontFamily: 'Inter, -apple-system, "Noto Sans KR", sans-serif',
+      fontSize: '14px',
+      edgeLabelBackground: '#EFF6FF',
+      clusterBkg: '#EFF6FF',
+      clusterBorder: '#BFDBFE',
+      titleColor: '#1e3a5f',
+      nodeTextColor: '#1e3a5f',
+    }
+  });
   await mermaid.run();
 </script>
