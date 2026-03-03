@@ -20,36 +20,15 @@ flowchart LR
 
 ## 학습 섹션 연결
 
-<div class="card-grid" markdown="0">
-  <div class="card card-process">
-    <h4><a href="{{ '/process/01-overview/' | relative_url }}">MM 모듈 개요</a></h4>
-    <p>조직 구조, 핵심 개념</p>
-  </div>
-  <div class="card card-process">
-    <h4><a href="{{ '/process/02-flow/' | relative_url }}">P2P 전체 흐름</a></h4>
-    <p>프로세스 단계별 상세</p>
-  </div>
-  <div class="card card-process">
-    <h4><a href="{{ '/process/03-integration/' | relative_url }}">타 모듈 통합</a></h4>
-    <p>FI, PP, SD 연계</p>
-  </div>
-  <div class="card card-master">
-    <h4><a href="{{ '/master-data/index/' | relative_url }}">기준 정보</a></h4>
-    <p>자재, 공급업체, Info Record</p>
-  </div>
-  <div class="card card-purchasing">
-    <h4><a href="{{ '/purchasing/index/' | relative_url }}">구매관리</a></h4>
-    <p>PR - PO - GR</p>
-  </div>
-  <div class="card card-inventory">
-    <h4><a href="{{ '/inventory/index/' | relative_url }}">재고관리</a></h4>
-    <p>Movement Type, 재고 유형</p>
-  </div>
-  <div class="card card-invoice">
-    <h4><a href="{{ '/invoice/index/' | relative_url }}">송장 검증</a></h4>
-    <p>3-way Matching, MIRO</p>
-  </div>
-</div>
+| 섹션 | 설명 |
+|------|------|
+| [🔄 MM 모듈 개요]({{ '/process/01-overview/' | relative_url }}) | 조직 구조, 핵심 개념 |
+| [🔄 P2P 전체 흐름]({{ '/process/02-flow/' | relative_url }}) | 프로세스 단계별 상세 |
+| [🔄 타 모듈 통합]({{ '/process/03-integration/' | relative_url }}) | FI, PP, SD 연계 |
+| [📦 기준 정보]({{ '/master-data/index/' | relative_url }}) | 자재, 공급업체, Info Record |
+| [🛒 구매관리]({{ '/purchasing/index/' | relative_url }}) | PR - PO - GR |
+| [📊 재고관리]({{ '/inventory/index/' | relative_url }}) | Movement Type, 재고 유형 |
+| [🧾 송장 검증]({{ '/invoice/index/' | relative_url }}) | 3-way Matching, MIRO |
 
 ---
 

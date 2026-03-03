@@ -16,33 +16,13 @@ flowchart LR
     PR --> RFQ["(RFQ)"] --> PO --> GR --> IV
 ```
 
-<div class="card-grid" markdown="0">
-  <div class="card card-purchasing">
-    <h4><a href="{{ '/purchasing/01-purchase-requisition/' | relative_url }}">구매 요청 (PR)</a></h4>
-    <p>구매 요청서 생성 및 관리</p>
-    <span class="card-badge">ME51N</span>
-  </div>
-  <div class="card card-purchasing">
-    <h4><a href="{{ '/purchasing/02-rfq-quotation/' | relative_url }}">RFQ / 견적</a></h4>
-    <p>견적 요청 및 공급업체 비교</p>
-    <span class="card-badge">ME41</span>
-  </div>
-  <div class="card card-purchasing">
-    <h4><a href="{{ '/purchasing/03-purchase-order/' | relative_url }}">구매 발주 (PO)</a></h4>
-    <p>구매 주문서 생성</p>
-    <span class="card-badge">ME21N</span>
-  </div>
-  <div class="card card-purchasing">
-    <h4><a href="{{ '/purchasing/04-goods-receipt/' | relative_url }}">입고 처리 (GR)</a></h4>
-    <p>입고 및 자재 문서 생성</p>
-    <span class="card-badge">MIGO</span>
-  </div>
-  <div class="card card-purchasing">
-    <h4><a href="{{ '/purchasing/05-special-procurement/' | relative_url }}">특수 조달</a></h4>
-    <p>외주, 위탁, STO 등</p>
-    <span class="card-badge">다양</span>
-  </div>
-</div>
+| 문서 | 설명 | T-code |
+|------|------|--------|
+| [구매 요청 (PR)]({{ '/purchasing/01-purchase-requisition/' | relative_url }}) | 구매 요청서 생성 및 관리 | ME51N |
+| [RFQ / 견적]({{ '/purchasing/02-rfq-quotation/' | relative_url }}) | 견적 요청 및 공급업체 비교 | ME41 |
+| [구매 발주 (PO)]({{ '/purchasing/03-purchase-order/' | relative_url }}) | 구매 주문서 생성 | ME21N |
+| [입고 처리 (GR)]({{ '/purchasing/04-goods-receipt/' | relative_url }}) | 입고 및 자재 문서 생성 | MIGO |
+| [특수 조달]({{ '/purchasing/05-special-procurement/' | relative_url }}) | 외주, 위탁, STO 등 | 다양 |
 
 ---
 

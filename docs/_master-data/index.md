@@ -12,23 +12,12 @@ PR, PO, GR, MIRO - 모든 거래는 기준 정보를 참조합니다.
 
 ## 기준 정보 유형
 
-<div class="card-grid" markdown="0">
-  <div class="card card-master">
-    <h4><a href="{{ '/master-data/01-material-master/' | relative_url }}">자재 기준 정보</a></h4>
-    <p>구매/생산/재고의 기준</p>
-    <span class="card-badge">MM01/02/03</span>
-  </div>
-  <div class="card card-master">
-    <h4><a href="{{ '/master-data/02-vendor-master/' | relative_url }}">공급업체 기준 정보</a></h4>
-    <p>S/4HANA 비즈니스 파트너</p>
-    <span class="card-badge">BP</span>
-  </div>
-  <div class="card card-master">
-    <h4><a href="{{ '/master-data/03-purchasing-info/' | relative_url }}">Info Record & Source List</a></h4>
-    <p>자재-공급업체 연결</p>
-    <span class="card-badge">ME11/ME01</span>
-  </div>
-</div>
+| 문서 | 설명 | T-code |
+|------|------|--------|
+| [자재 기준 정보]({{ '/master-data/01-material-master/' | relative_url }}) | 구매/생산/재고의 기준 | MM01/02/03 |
+| [공급업체 기준 정보]({{ '/master-data/02-vendor-master/' | relative_url }}) | S/4HANA 비즈니스 파트너 | BP |
+| [Info Record & Source List]({{ '/master-data/03-purchasing-info/' | relative_url }}) | 자재-공급업체 연결 | ME11/ME01 |
+| [자재명세서 BOM]({{ '/master-data/04-bom/' | relative_url }}) | 생산/원가 구성 자재 목록 | CS01/02/03 |
 
 ---
 

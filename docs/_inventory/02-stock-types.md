@@ -104,7 +104,7 @@ MMBE 실행 시 표시되는 주요 열:
 
 ---
 
-<details>
+<details markdown="1">
 <summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |

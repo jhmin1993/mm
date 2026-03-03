@@ -39,20 +39,37 @@ MM01 실행 시 필요한 **뷰(View)**를 선택하여 데이터 입력:
 
 ---
 
-## 자재 유형 (Material Type)
+## 산업부문 & 자재 유형
 
-| 유형 | 코드 | 설명 |
-|------|------|------|
-| 원자재 | ROH | Raw Material - 재고 관리 |
-| 반제품 | HALB | Semi-Finished |
-| 완제품 | FERT | Finished Product |
-| 소모품 | HIBE | Operating Supplies |
-| 비재고품 | NLAG | Non-Stock (소비 직접 처리) |
-| 서비스 | DIEN | Service |
-| 거래품 | HAWA | Trading Goods |
+Material Master는 **산업부문 (Industry Sector)** 과 **자재유형 (Material Type)** 으로 구분 관리됩니다.
 
-> **자재 유형**이 중요한 이유: 재고 관리 여부, 평가 클래스, 구매 가능 여부 등을 결정합니다.
+- **산업부문**: 화면에 표시되는 필드 및 형식을 결정 (예: M = 기계, P = 플랜트 엔지니어링)
+- **자재유형**: 수량/금액 재고 관리 여부, 번호 범위, 조달 유형, 계정 지정 범주 등을 제어
+
+| 유형 | 코드 | 설명 | 수량 관리 | 금액 관리 |
+|------|------|------|----------|----------|
+| 원자재 | ROH | Raw Material | O | O |
+| 반제품 | HALB | Semi-Finished | O | O |
+| 완제품 | FERT | Finished Product | O | O |
+| 상품 | HAWA | Trading Goods | O | O |
+| 서비스 | DIEN | Service | - | - |
+| 비재고품 | NLAG | Non-Stock (소비 직접 처리) | - | - |
+| 비평가품 | UNBW | Non-Valuated Material | O | - |
+| 포장재 | VERP | Packaging | O | O |
+| 가격관리 | WERT | Value-Only Materials | - | O |
+
+> **자재 유형**이 중요한 이유: 재고 관리 여부, 평가 클래스, 구매 가능 여부 등을 결정합니다. SPRO `[OMS2]`에서 설정.
 {: .callout .callout-important}
+
+### 수량 관리 vs 금액 관리
+
+자재유형에 따라 자재 이동 시 생성 문서가 결정됩니다:
+
+| 설정 | 생성 문서 |
+|------|----------|
+| 수량 관리 O + 금액 관리 O | 자재 문서 + 회계 문서 |
+| 수량 관리 O + 금액 관리 X | 자재 문서만 |
+| 수량 관리 X + 금액 관리 X | 문서 미생성 |
 
 ---
 
@@ -72,6 +89,43 @@ MM01 실행 시 필요한 **뷰(View)**를 선택하여 데이터 입력:
 
 ---
 
+## MRP View 주요 필드
+
+### MRP 유형 (MRP Type)
+
+| MRP 유형 | 로트 크기 | 설명 |
+|---------|---------|------|
+| ND | EX | 로트별 주문 - 수작업으로 PR 수량 입력 |
+| VB | FX | 고정 로트 - 재주문점 이하 시 고정 수량 PR 생성 |
+| HB | - | 최대 재고 레벨 - 재주문점 이하 시 최대 재고까지 PR 생성 |
+| PD | TB | 일별 로트 - 일일 필요량 단위 PR 생성 |
+| PD | T3 | 3일 로트 - 3일 단위 필요량 PR 생성 |
+| PD | WB | 주별 로트 - 1주일 필요량 합산 PR 생성 |
+| PD | MB | 월별 로트 - 월별 필요량 합산 PR 생성 |
+
+### 일정 관련 필드 (MRP Scheduling)
+
+| 필드 | 설명 |
+|------|------|
+| In-house Production Time | 내부 생산 소요 기본일수 |
+| Planned Delivery Time | 구매 리드타임 (구매품 기준) |
+| GR Processing Time | 입고 후 사용 가능까지 소요일수 |
+| Scheduling Margin Key | PO 오픈 기간, 생산 전후 플로트 정의 키 |
+| Safety Stock | 결품 방지용 안전 재고량 |
+
+### 올림값 (Rounding Value) 예시
+
+올림값 `10` 설정 시:
+
+| 소요량 | MRP 계획 수량 |
+|--------|-------------|
+| 3 EA | 10 EA |
+| 14 EA | 20 EA |
+| 18 EA | 20 EA |
+| 22 EA | 30 EA |
+
+---
+
 ## Accounting View 주요 필드
 
 | 필드 | 설명 |
@@ -80,6 +134,18 @@ MM01 실행 시 필요한 **뷰(View)**를 선택하여 데이터 입력:
 | Price Control | V (이동평균) / S (표준) |
 | Moving Avg. Price | 현재 이동 평균 단가 |
 | Standard Price | 표준 단가 |
+
+### 가격 통제 (Price Control)
+
+| 구분 | 코드 | 사용 대상 | 특징 |
+|------|------|----------|------|
+| Moving Average Price | V | 원자재, 구매품 | 입고마다 단가 재계산 (가중평균) |
+| Standard Price | S | 완제품, 반제품 | 월/연간 표준원가 추정 후 고정 |
+
+**이동평균 계산 예시:**
+- 1차 입고: 단가 80원 x 10개 = 800원
+- 2차 입고: 단가 60원 x 40개 = 2,400원
+- 재고 평균단가: (800 + 2,400) / 50개 = **64원**
 
 ---
 
@@ -91,7 +157,7 @@ MM01 실행 시 필요한 **뷰(View)**를 선택하여 데이터 입력:
 | MM02 | 자재 마스터 변경 |
 | MM03 | 자재 마스터 조회 |
 | MM06 | 삭제 플래그 설정 |
-| MM60 | 자재 사용처 조회 |
+| MM60 | 자재 목록 조회 (평가된 자재만 필터 가능) |
 | MMBE | 재고 현황 조회 (플랜트별) |
 | MM50 | 자재 마스터 확장 (뷰 추가) |
 
@@ -117,7 +183,7 @@ MM01 실행 시 필요한 **뷰(View)**를 선택하여 데이터 입력:
 
 ---
 
-<details>
+<details markdown="1">
 <summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |

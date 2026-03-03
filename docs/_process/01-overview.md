@@ -32,11 +32,36 @@ graph TD
 | 단위 | 설명 | 예시 |
 |------|------|------|
 | Client | SAP 시스템 최상위 단위 | 그룹사 전체 |
-| Company Code | 독립 재무제표 작성 단위 | 각 법인 |
-| Plant | 자재 관리 기준 단위 | 서울 공장, 부산 물류 |
-| Storage Location | Plant 내 보관 장소 | 원자재 창고, 완제품 창고 |
-| Purch. Org | 구매 협상/조건 관리 | 중앙구매, 현지구매 |
+| Company Code | 독립 재무제표 작성 단위 (1:N Plant) | 각 법인 |
+| Plant | 자재 관리/재고 평가/MRP 기준 단위 (1:N SLoc) | 서울 공장, 부산 물류 |
+| Storage Location | Plant 내 보관 장소 (N:M Plant) | 원자재 창고, 완제품 창고 |
+| Purch. Org | 구매 협상/조건 관리 (N:M Company Code) | 중앙구매, 현지구매 |
 | Purch. Group | 실무 구매 담당 단위 | 기계팀, 전자팀 |
+
+### 구매 조직 운영 유형
+
+| 유형 | 설명 | 특징 |
+|------|------|------|
+| 중앙 집중 구매조직 | Company Code 레벨에 하나의 구매조직 | 협상력 강화, 가격경쟁력, Global Procurement |
+| 분산 구매조직 | Plant별로 별도 구매조직 | 로컬 구매 비율 높음, 배송 정보 획득 용이 |
+| 표준 구매조직 | 여러 구매조직이 특정 Plant에 조달 시 대표로 지정 | STO, Consignment 소스 자동 결정에 사용 |
+| 기준 구매조직 | 유리한 계약 조건을 다른 구매조직이 공유 | 기준 구매조직의 조건레코드를 가격 결정에 활용 |
+
+> **Plant**는 단순 공장 외에 물류센터, 판매지사, 본부도 될 수 있습니다. 또한 재고 평가(Valuation Area)의 기준 단위이므로 초기 정의가 매우 중요합니다.
+{: .callout .callout-important}
+
+### 조직 구조 설정 T-code (SPRO)
+
+| T-code | 경로 | 설명 |
+|--------|------|------|
+| OX02 | ES - Definition - FI - Edit Company Code | 회사코드 생성/변경 |
+| OX10 | ES - Definition - Logistics - Define Plant | 플랜트 생성 |
+| OX18 | ES - Assignment - Logistics - Assign Plant to CoCd | 플랜트 - 회사코드 지정 |
+| OX09 | ES - Definition - MM - Maintain Storage Location | 저장위치 생성 |
+| OMKJ | ES - Definition - MM - Maintain Purch. Org | 구매조직 생성 |
+| OX01 | ES - Assignment - MM - Assign POrg to CoCd | 구매조직 - 회사코드 지정 |
+| OX17 | ES - Assignment - MM - Assign POrg to Plant | 구매조직 - 플랜트 지정 |
+| OMKI | ES - Assignment - MM - Assign Standard POrg to Plant | 표준 구매조직 지정 |
 
 ---
 
@@ -95,7 +120,7 @@ graph LR
 
 ---
 
-<details>
+<details markdown="1">
 <summary>필드 → 마스터 연관</summary>
 
 | 화면 필드 | 데이터 출처 | 설정/관리 위치 | 비고 |

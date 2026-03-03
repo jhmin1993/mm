@@ -20,18 +20,10 @@ flowchart LR
 
 ## 학습 항목
 
-<div class="card-grid" markdown="0">
-  <div class="card card-invoice">
-    <h4><a href="{{ '/invoice/01-three-way-matching/' | relative_url }}">3-way Matching</a></h4>
-    <p>PO - GR - IV 핵심 검증 방법</p>
-    <span class="card-badge">MIRO</span>
-  </div>
-  <div class="card card-invoice">
-    <h4><a href="{{ '/invoice/02-invoice-blocks/' | relative_url }}">송장 블록</a></h4>
-    <p>불일치 시 자동/수동 블록 관리</p>
-    <span class="card-badge">MRBR</span>
-  </div>
-</div>
+| 문서 | 설명 | T-code |
+|------|------|--------|
+| [3-way Matching]({{ '/invoice/01-three-way-matching/' | relative_url }}) | PO - GR - IV 핵심 검증 방법 | MIRO |
+| [송장 블록]({{ '/invoice/02-invoice-blocks/' | relative_url }}) | 불일치 시 자동/수동 블록 관리 | MRBR |
 
 ---
 
