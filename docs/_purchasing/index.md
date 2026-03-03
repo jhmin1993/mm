@@ -28,11 +28,8 @@ flowchart LR
 
 ## 구매 조직 구조
 
-```mermaid
-graph TD
-    POrg["Purchasing Organization<br/>구매 조직"] --> PGroup["Purchasing Group<br/>구매 그룹"]
-    PGroup --> Plant["Plant<br/>조달 대상 플랜트"]
-```
-
-- **구매 조직**: 공급업체와의 계약/협상 단위
-- **구매 그룹**: 실무 담당자/팀 (PO 생성 기본값)
+| 단위 | 설명 |
+|------|------|
+| **구매 조직 (Purchasing Org)** | 공급업체와의 계약/협상 단위. 구매 조건(단가, 납기)을 관리 |
+| **구매 그룹 (Purchasing Group)** | 실무 담당자/팀. PR/PO 생성 시 기본값으로 입력됨 |
+| **플랜트 (Plant)** | 자재가 실제 입고되는 조달 대상 단위 |
