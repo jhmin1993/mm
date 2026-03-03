@@ -30,9 +30,10 @@ flowchart LR
 
 ```mermaid
 graph LR
-    POrg["POrg\n구매 조직"] --> PGroup["PGroup\n구매 그룹"]
-    PGroup --> Plant["Plant\n조달 플랜트"]
+    POrg["POrg<br/>구매 조직"] --> PGroup["PGroup<br/>구매 그룹"]
+    PGroup --> Plant["Plant<br/>조달 플랜트"]
 ```
 
-- **구매 조직**: 공급업체와의 계약/협상 단위
-- **구매 그룹**: 실무 담당자/팀 (PO 생성 기본값)
+- **구매 조직 (Purchasing Organization)**: 공급업체와 자재/서비스의 구매 조건(단가, 납기, 인코텀즈 등)을 협상하는 단위 조직. 1개 이상의 플랜트에 대한 구매를 관장하며, Info Record, 계약 등 구매 마스터의 기준 단위
+- **구매 그룹 (Purchasing Group)**: 실제 구매 업무를 수행하는 담당자 또는 담당 부서. PR/PO 생성 시 자재 마스터에 설정된 구매 그룹이 기본값으로 자동 입력됨
+- **플랜트 (Plant)**: 자재가 실제 입고되는 조달 대상 단위. 구매 조직은 1개 이상의 플랜트에 할당 가능 (N:M 관계)
