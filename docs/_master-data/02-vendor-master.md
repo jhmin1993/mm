@@ -34,6 +34,22 @@ BP 실행 → **역할(Role)** 선택하여 순차적으로 확장:
 > BP에서 구매 조직 데이터는: BP → Role `FLVN01` 선택 → 구매조직 번호 입력 후 진입
 {: .callout .callout-tip}
 
+### With Reference 버튼으로 기존 BP 복사 생성
+
+기존 공급업체와 유사한 새 공급업체를 생성할 때 **With Reference** 버튼을 사용하면 기존 BP 데이터를 복사하여 빠르게 생성할 수 있습니다.
+
+![BP - With Reference 버튼 (FLVN01 Supplier 역할)]({{ site.baseurl }}/assets/img/master-data/bp-01-with-reference.png)
+
+> **With Reference 버튼이 보이지 않는 경우**: `Create in BP role` 필드가 기본값(`000000` 일반)으로 되어 있으면 버튼이 표시되지 않습니다. **`FLVN01 Supplier (New)`로 변경**해야 With Reference 버튼이 활성화됩니다.
+{: .callout .callout-important}
+
+**With Reference 생성 절차:**
+1. BP 트랜잭션 실행
+2. `Create in BP role` 드롭다운에서 **`FLVN01 Supplier (New)`** 선택
+3. 상단에 **With Reference** 버튼 확인
+4. With Reference 클릭 → 참조할 기존 BP 번호 입력
+5. 복사된 데이터를 기반으로 신규 공급업체 정보 수정 후 저장
+
 ---
 
 ## 데이터 레벨 구조
