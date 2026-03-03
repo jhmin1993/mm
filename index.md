@@ -19,7 +19,7 @@ SAP Materials Management(MM) 모듈을 하루 30분씩 체계적으로 공부하
   </a>
   <a class="section-card" href="{{ '/process/index/' | relative_url }}" style="--card-color:#2383e2">
     <div class="section-card-title">MM 전체 프로세스</div>
-    <div class="section-card-desc">전체 흐름 &amp; 3일 단기 학습 커리큘럼</div>
+    <div class="section-card-desc">전체 흐름 &amp; 타 모듈 연계</div>
     <div class="section-card-count">4개 문서</div>
   </a>
   <a class="section-card" href="{{ '/master-data/index/' | relative_url }}" style="--card-color:#1a7f37">
@@ -46,6 +46,11 @@ SAP Materials Management(MM) 모듈을 하루 30분씩 체계적으로 공부하
     <div class="section-card-title">SPRO 설정 가이드</div>
     <div class="section-card-desc">MM 모듈 Customizing 경로 정리</div>
     <div class="section-card-count">4개 문서</div>
+  </a>
+  <a class="section-card" href="{{ '/glossary/index/' | relative_url }}" style="--card-color:#6e40c9">
+    <div class="section-card-title">용어 사전</div>
+    <div class="section-card-desc">SAP MM 핵심 용어 - Full Name 포함</div>
+    <div class="section-card-count">1개 문서</div>
   </a>
 </div>
 

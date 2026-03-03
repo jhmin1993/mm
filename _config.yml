@@ -40,6 +40,9 @@ collections:
   enterprise-structure:
     output: true
     permalink: /enterprise-structure/:path/
+  glossary:
+    output: true
+    permalink: /glossary/:path/
 
 defaults:
   - scope: { path: "docs/_posts", type: "posts" }
@@ -59,6 +62,8 @@ defaults:
   - scope: { type: "config-guide" }
     values: { layout: "page" }
   - scope: { type: "enterprise-structure" }
+    values: { layout: "page" }
+  - scope: { type: "glossary" }
     values: { layout: "page" }
 
 future: true

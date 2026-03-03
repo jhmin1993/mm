@@ -22,7 +22,7 @@ nav_order: 3
 flowchart LR
     A["자재 마스터"] --> C["Info Record"]
     B["공급업체 마스터"] --> C
-    C --> D["PO 자동 조건 적용\n(단가, 납기일, 허용 오차)"]
+    C --> D["PO 자동 조건 적용<br/>(단가, 납기일, 허용 오차)"]
 ```
 
 ### Info Record 유형 (Info Category)
@@ -225,9 +225,9 @@ Vendor K1 (외부)           10%     0
 
 ```mermaid
 flowchart LR
-    PR["구매 요청"] --> IR["Info Record\n(단가 제안)"]
-    PR --> SL["Source List\n(업체 지정)"]
-    SL --> QA["Quota Arrangement\n(업체별 배분율)"]
+    PR["구매 요청"] --> IR["Info Record<br/>(단가 제안)"]
+    PR --> SL["Source List<br/>(업체 지정)"]
+    SL --> QA["Quota Arrangement<br/>(업체별 배분율)"]
     IR --> PO["구매 오더"]
     QA --> PO
     MM["자재 마스터"] --> IR

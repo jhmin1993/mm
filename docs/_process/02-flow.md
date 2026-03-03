@@ -9,13 +9,13 @@ nav_order: 2
 
 ```mermaid
 flowchart LR
-    A["수요 발생\n(MRP / 수동)"] --> B["PR\nME51N"]
-    B -->|승인| C["RFQ\nME41"]
-    C -->|견적 비교| D["PO\nME21N"]
-    D --> E["GR\nMIGO 101"]
-    E --> F["QI\n선택"]
-    F --> G["IV\nMIRO"]
-    G --> H["FI 지급\nF110"]
+    A["수요 발생<br/>(MRP / 수동)"] --> B["PR<br/>ME51N"]
+    B -->|승인| C["RFQ<br/>ME41"]
+    C -->|견적 비교| D["PO<br/>ME21N"]
+    D --> E["GR<br/>MIGO 101"]
+    E --> F["QI<br/>선택"]
+    F --> G["IV<br/>MIRO"]
+    G --> H["FI 지급<br/>F110"]
 ```
 
 ---
@@ -27,11 +27,11 @@ PR을 수동으로 생성하는 대신, MRP 실행 시 부족 자재에 대해 P
 
 ```mermaid
 flowchart LR
-    A["수요 요소\n(PIR / SO / 예약)"] --> B["MRP Run\nMD01N / MD02"]
+    A["수요 요소<br/>(PIR / SO / 예약)"] --> B["MRP Run<br/>MD01N / MD02"]
     B --> C{"조달 유형"}
-    C -->|외부 조달| D["계획 구매요청\nPR 자동 생성"]
-    C -->|내부 생산| E["계획 오더\nPlanned Order"]
-    D --> F["소스 지정 후\nPO 전환 ME57"]
+    C -->|외부 조달| D["계획 구매요청<br/>PR 자동 생성"]
+    C -->|내부 생산| E["계획 오더<br/>Planned Order"]
+    D --> F["소스 지정 후<br/>PO 전환 ME57"]
 ```
 
 ### MRP 유형 (MRP Type - 자재 마스터 MRP 1 View)
@@ -81,10 +81,10 @@ MRP는 수요 요소와 공급 요소를 비교하여 **순소요량(Net Require
 
 ```mermaid
 flowchart LR
-    A["수요 확인\nMD04"] --> B["MRP 실행\nMD01N / MDBT"]
-    B --> C["결과 검토\nMD05 / MD04"]
+    A["수요 확인<br/>MD04"] --> B["MRP 실행<br/>MD01N / MDBT"]
+    B --> C["결과 검토<br/>MD05 / MD04"]
     C --> D["예외 메시지 처리"]
-    D --> E["PR 확정\nME57 PO 전환"]
+    D --> E["PR 확정<br/>ME57 PO 전환"]
 ```
 
 ### 예외 메시지 (Exception Messages)

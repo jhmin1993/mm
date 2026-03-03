@@ -55,6 +55,14 @@
            class="nav-item {% if page.url contains '/config-guide/' %}active{% endif %}">
           ⚙️ SPRO 설정 가이드
         </a>
+        <a href="{{ '/glossary/index/' | relative_url }}"
+           class="nav-item {% if page.url contains '/glossary/' %}active{% endif %}">
+          📖 용어 사전
+        </a>
+        <a href="{{ '/curriculum/' | relative_url }}"
+           class="nav-item {% if page.url contains '/curriculum/' %}active{% endif %}">
+          📅 학습 커리큘럼
+        </a>
         <div class="nav-section">학습 일지</div>
         <a href="{{ '/study-log/' | relative_url }}"
            class="nav-item {% if page.url == '/study-log/' %}active{% endif %}">

@@ -35,8 +35,22 @@ PR, PO, GR, MIRO - 모든 거래는 기준 정보를 참조합니다.
 
 ```mermaid
 flowchart TD
-    A["자재 기준 정보<br/>Material Master"] <--> B["Info Record<br/>자재 + 공급업체 조합의 가격/납기 조건"]
-    B <--> C["공급업체 기준 정보<br/>Vendor Master / BP"]
+    MM["자재 기준 정보<br/>Material Master"] --> IR["Info Record<br/>자재 + 업체 조합<br/>단가/납기 조건"]
+    VM["공급업체 기준 정보<br/>Vendor Master / BP"] --> IR
+    MM --> SL["Source List<br/>허가 공급원 목록"]
+    MM --> QA["Quota Arrangement<br/>업체별 물량 배분율"]
+    SL --> QA
+    IR --> PO["구매 오더 (PO)<br/>자동 단가/조건 적용"]
+    QA --> PO
+    MM --> BOM["BOM<br/>구성 자재 목록"]
+    BOM --> PO
 ```
 
-Source List: 특정 자재에 허가된 공급업체 목록 관리
+| 기준 정보 | 키 조합 | 주요 용도 |
+|----------|--------|---------|
+| Material Master | 자재번호 + 플랜트 | 구매/생산/재고/원가의 모든 기준 |
+| Vendor Master | BP 번호 + 구매조직 | 공급업체 계약 조건 |
+| Info Record | 자재 + 공급업체 + 구매조직 | PO 자동 단가 및 납기 제공 |
+| Source List | 자재 + 플랜트 + 유효기간 | 허가된 공급업체 목록 및 MRP 소스 결정 |
+| Quota Arrangement | 자재 + 플랜트 + 유효기간 | 복수 공급업체 자동 물량 배분 |
+| BOM | 상위 자재 + 플랜트 + 용도 | MRP 폭발, 생산 출고, 원가 계산 기준 |
