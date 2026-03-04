@@ -177,3 +177,5 @@ graph LR
 - [MM 모듈 개요]({{ '/process/01-overview/' | relative_url }}) - MM 전체 개념 및 조직 구조 요약
 - [SPRO 설정 가이드]({{ '/config-guide/index/' | relative_url }}) - Customizing 설정 경로 정리
 - [SAP MM 조직구조 완벽 가이드]({{ '/enterprise-structure/lib/mm_organization_structure/' | relative_url }}) - Plant/Storage Location/Purchasing Org 심화 정리 및 실무 사례
+- [구매조직(Purchasing Organization) 완전 이해]({{ '/enterprise-structure/lib/mm-purchasing-org/' | relative_url }}) - 구매조직 유형, 할당 방식, 실무 운영 방법
+- [구매조직 / 참조구매조직 / 인포레코드 완전 정리]({{ '/enterprise-structure/lib/mm-purchasing-org-complete/' | relative_url }}) - 참조구매조직 활용, Info Record 연계 심화
