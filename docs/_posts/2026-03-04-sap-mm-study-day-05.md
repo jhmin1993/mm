@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Day 05 - Week 1 복습 및 조직 구조 완전 정리"
-date: 2026-03-08
+date: 2026-03-04
 categories: [study-log]
 tags: [복습, 조직구조, Week1, P2P]
 ---

@@ -40,8 +40,12 @@
           📦 기준 정보
         </a>
         <a href="{{ '/purchasing/index/' | relative_url }}"
-           class="nav-item {% if page.url contains '/purchasing/' %}active{% endif %}">
+           class="nav-item {% if page.url contains '/purchasing/' %}{% unless page.url contains '/purchasing-scenarios/' %}active{% endunless %}{% endif %}">
           🛒 구매관리
+        </a>
+        <a href="{{ '/purchasing-scenarios/index/' | relative_url }}"
+           class="nav-item {% if page.url contains '/purchasing-scenarios/' %}active{% endif %}">
+          📋 구매 시나리오
         </a>
         <a href="{{ '/inventory/index/' | relative_url }}"
            class="nav-item {% if page.url contains '/inventory/' %}active{% endif %}">

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Day 02 - SAP GUI 탐색 및 기본 조작"
-date: 2026-03-05
+date: 2026-03-04
 categories: [study-log]
 tags: [SAP GUI, T-code, Favorites, 기본조작]
 ---

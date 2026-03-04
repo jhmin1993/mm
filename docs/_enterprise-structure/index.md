@@ -176,3 +176,4 @@ graph LR
 
 - [MM 모듈 개요]({{ '/process/01-overview/' | relative_url }}) - MM 전체 개념 및 조직 구조 요약
 - [SPRO 설정 가이드]({{ '/config-guide/index/' | relative_url }}) - Customizing 설정 경로 정리
+- [SAP MM 조직구조 완벽 가이드]({{ '/enterprise-structure/lib/mm_organization_structure/' | relative_url }}) - Plant/Storage Location/Purchasing Org 심화 정리 및 실무 사례

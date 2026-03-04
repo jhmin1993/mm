@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Day 04 - Plant / Storage Location 조직 단위"
-date: 2026-03-07
+date: 2026-03-04
 categories: [study-log]
 tags: [조직구조, Plant, Storage Location, Purchasing Org]
 ---

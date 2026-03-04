@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Day 03 - Client / Company Code 계층 개념"
-date: 2026-03-06
+date: 2026-03-04
 categories: [study-log]
 tags: [조직구조, Client, Company Code, 계층]
 ---

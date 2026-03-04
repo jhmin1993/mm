@@ -43,6 +43,9 @@ collections:
   glossary:
     output: true
     permalink: /glossary/:path/
+  purchasing-scenarios:
+    output: true
+    permalink: /purchasing-scenarios/:path/
 
 defaults:
   - scope: { path: "docs/_posts", type: "posts" }
@@ -64,6 +67,8 @@ defaults:
   - scope: { type: "enterprise-structure" }
     values: { layout: "page" }
   - scope: { type: "glossary" }
+    values: { layout: "page" }
+  - scope: { type: "purchasing-scenarios" }
     values: { layout: "page" }
 
 future: true

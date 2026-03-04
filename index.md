@@ -52,6 +52,11 @@ SAP Materials Management(MM) 모듈을 하루 30분씩 체계적으로 공부하
     <div class="section-card-desc">SAP MM 핵심 용어 - Full Name 포함</div>
     <div class="section-card-count">1개 문서</div>
   </a>
+  <a class="section-card" href="{{ '/purchasing-scenarios/index/' | relative_url }}" style="--card-color:#e67e22">
+    <div class="section-card-title">구매 시나리오</div>
+    <div class="section-card-desc">표준/계약/SA/무재고/위탁/STO 시나리오별 흐름</div>
+    <div class="section-card-count">6개 문서</div>
+  </a>
 </div>
 
 ---
