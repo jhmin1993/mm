@@ -11,23 +11,19 @@ tags: [조직구조, Purchasing Organization, Plant, 중앙구매, 분산구매]
 > **구매조직과 플랜트는 같은 레벨이 아니다.**
 > 둘은 **목적 자체가 다른 별개의 조직 단위**다.
 
-```
-플랜트      →  "어디서 재고를 관리하고 생산하냐"
-구매조직    →  "누가 공급업체와 계약하고 발주하냐"
-```
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">플랜트      →  "어디서 재고를 관리하고 생산하냐"
+구매조직    →  "누가 공급업체와 계약하고 발주하냐"</pre>
 
 ---
 
-## 1. 플랜트 vs 구매조직 — 삼성전자 예시
+## 1. 플랜트 vs 구매조직 - 삼성전자 예시
 
 ### 플랜트 = 공장/사업장 ("어디서")
 
-```
-삼성전자
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">삼성전자
 ├── 수원 공장    (Plant 1000)  ← 스마트폰 생산
 ├── 구미 공장    (Plant 2000)  ← TV 생산
-└── 평택 공장    (Plant 3000)  ← 반도체 생산
-```
+└── 평택 공장    (Plant 3000)  ← 반도체 생산</pre>
 
 - 각 공장은 **독립적으로 재고를 관리**
 - 수원 공장 재고 ≠ 구미 공장 재고 (Plant가 다르면 재고도 분리)
@@ -37,11 +33,9 @@ tags: [조직구조, Purchasing Organization, Plant, 중앙구매, 분산구매]
 
 ### 구매조직 = 구매 협상 권한을 가진 팀 ("누가")
 
-```
-삼성전자
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">삼성전자
 └── 중앙구매팀 (Purchasing Org P100)
-    "공급업체 A에 연간 1조 구매할테니 단가 낮춰줘" 협상하는 팀
-```
+    "공급업체 A에 연간 1조 구매할테니 단가 낮춰줘" 협상하는 팀</pre>
 
 - 공급업체와 **가격, 납기, 조건을 협상하고 계약**하는 단위
 - 구매오더(PO) 발행 권한 보유
@@ -51,27 +45,23 @@ tags: [조직구조, Purchasing Organization, Plant, 중앙구매, 분산구매]
 
 ## 2. 중앙구매 vs 분산구매
 
-### ✅ 중앙구매 = 구매조직 1개 → 여러 플랜트 담당
+### 중앙구매 = 구매조직 1개 → 여러 플랜트 담당
 
-```
-구매조직 P100 (삼성 중앙구매팀)
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">구매조직 P100 (삼성 중앙구매팀)
    ├── Plant 1000 (수원 공장)  발주 가능 ✅
    ├── Plant 2000 (구미 공장)  발주 가능 ✅
-   └── Plant 3000 (평택 공장)  발주 가능 ✅
-```
+   └── Plant 3000 (평택 공장)  발주 가능 ✅</pre>
 
 > ⚠️ "구매조직 1개 = 플랜트 1개"가 중앙구매가 **아니다!**
 > **구매조직 1개가 여러 플랜트를 커버**하는 것이 중앙구매다.
 
 ---
 
-### ✅ 분산구매 = 플랜트마다 각자의 구매조직이 있음
+### 분산구매 = 플랜트마다 각자의 구매조직이 있음
 
-```
-구매조직 P100 (수원 구매팀)  →  Plant 1000만 담당
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">구매조직 P100 (수원 구매팀)  →  Plant 1000만 담당
 구매조직 P200 (구미 구매팀)  →  Plant 2000만 담당
-구매조직 P300 (평택 구매팀)  →  Plant 3000만 담당
-```
+구매조직 P300 (평택 구매팀)  →  Plant 3000만 담당</pre>
 
 - 각 공장이 독립적으로 공급업체와 협상하고 발주
 
@@ -114,13 +104,11 @@ tags: [조직구조, Purchasing Organization, Plant, 중앙구매, 분산구매]
 
 ## 6. 핵심 요약
 
-```
-플랜트       =  재고/생산 단위  (공장, 창고)
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">플랜트       =  재고/생산 단위  (공장, 창고)
 구매조직     =  계약/발주 권한 단위  (구매팀)
 
 중앙구매     =  구매조직 1개  →  여러 플랜트 커버
-분산구매     =  구매조직 여러 개  →  각자 플랜트 1개씩 담당
-```
+분산구매     =  구매조직 여러 개  →  각자 플랜트 1개씩 담당</pre>
 
 > 컨설턴트 관점에서 구매조직 설계 시 핵심 질문:
 > **"구매 협상력을 어디에 집중할 것인가?"**

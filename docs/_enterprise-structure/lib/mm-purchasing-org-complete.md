@@ -6,50 +6,42 @@ categories: [study-log]
 tags: [조직구조, Purchasing Organization, Reference POrg, Info Record, ME11]
 ---
 
-## 1. 구매조직 vs 플랜트 — 먼저 개념 분리
+## 1. 구매조직 vs 플랜트 - 먼저 개념 분리
 
 > 이 둘은 같은 레벨이 아니다. **목적 자체가 다르다.**
 
-```
-플랜트      →  "어디서 재고를 관리하고 생산하냐"  (공장, 창고)
-구매조직    →  "누가 공급업체와 계약하고 발주하냐" (구매팀)
-```
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">플랜트      →  "어디서 재고를 관리하고 생산하냐"  (공장, 창고)
+구매조직    →  "누가 공급업체와 계약하고 발주하냐" (구매팀)</pre>
 
 ### 삼성전자 예시
 
-```
-플랜트 (공장)
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">플랜트 (공장)
 ├── Plant 1000  수원 공장   ← 스마트폰 생산
 ├── Plant 2000  구미 공장   ← TV 생산
 └── Plant 3000  평택 공장   ← 반도체 생산
 
 구매조직 (구매팀)
-└── P100  삼성 중앙구매팀   ← 세 공장 모두 발주 가능
-```
+└── P100  삼성 중앙구매팀   ← 세 공장 모두 발주 가능</pre>
 
 ---
 
 ## 2. 중앙구매 vs 분산구매
 
-### 중앙구매 — 구매조직 1개가 여러 플랜트 담당
+### 중앙구매 - 구매조직 1개가 여러 플랜트 담당
 
-```
-P100 (중앙구매팀)
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">P100 (중앙구매팀)
   ├── Plant 1000 수원 공장  ✅
   ├── Plant 2000 구미 공장  ✅
-  └── Plant 3000 평택 공장  ✅
-```
+  └── Plant 3000 평택 공장  ✅</pre>
 
 > ⚠️ "구매조직 1개 = 플랜트 1개"가 중앙구매가 아니다!
 > **구매조직 1개가 여러 플랜트를 커버**하는 게 중앙구매다.
 
-### 분산구매 — 플랜트마다 각자의 구매조직
+### 분산구매 - 플랜트마다 각자의 구매조직
 
-```
-P100 수원 구매팀  →  Plant 1000만 담당
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">P100 수원 구매팀  →  Plant 1000만 담당
 P200 구미 구매팀  →  Plant 2000만 담당
-P300 평택 구매팀  →  Plant 3000만 담당
-```
+P300 평택 구매팀  →  Plant 3000만 담당</pre>
 
 ### 비교표
 
@@ -67,56 +59,47 @@ P300 평택 구매팀  →  Plant 3000만 담당
 > **"이 자재를 이 공급업체한테서 살 때의 단가/납기 조건"을 저장한 마스터**
 > 쉽게 말하면 **단골 가게 가격표**
 
-```
-철강사 A에서 철강봉 살 때
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">철강사 A에서 철강봉 살 때
   → 단가       : 톤당 80만원
   → 납기       : 주문 후 7일
-  → 최소발주량 : 10톤
-```
+  → 최소발주량 : 10톤</pre>
 
 이걸 ME11에 등록해두면 PO 만들 때 **단가가 자동으로 채워진다.**
 
 ### 인포레코드 구성 요소
 
-```
-공급업체  +  자재  +  구매조직
-```
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">공급업체  +  자재  +  구매조직</pre>
 
 예시:
-```
-공급업체: 철강사 A
+
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">공급업체: 철강사 A
 자재:     철강봉
 구매조직: P100        ← 이 구매조직만 이 단가 사용 가능
-단가:     톤당 100만원
-```
+단가:     톤당 100만원</pre>
 
 ---
 
 ## 4. 참조구매조직(Reference POrg / RORG)이 왜 필요한가
 
-### 문제 상황 — RORG 없을 때
+### 문제 상황 - RORG 없을 때
 
 P100, P200이 각자 공급업체 A랑 따로 협상하면:
 
-```
-P100 인포레코드: 철강사A + 철강봉 + P100 = 톤당 100만원
-P200 인포레코드: 철강사A + 철강봉 + P200 = 톤당 110만원
-```
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">P100 인포레코드: 철강사A + 철강봉 + P100 = 톤당 100만원
+P200 인포레코드: 철강사A + 철강봉 + P200 = 톤당 110만원</pre>
 
 - 같은 공급업체인데 **가격이 달라짐**
 - 인포레코드를 **구매조직 수만큼 따로 만들어야** 함
 - 나중에 가격 변경되면 **전부 다 수정해야 함**
 
-### 해결책 — RORG 도입
+### 해결책 - RORG 도입
 
-```
-RORG (본사 전략구매팀)가 철강사 A랑 협상
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">RORG (본사 전략구매팀)가 철강사 A랑 협상
 "전체 그룹이 연간 150톤 살테니 톤당 80만원 해줘"
 → 인포레코드 1개: 철강사A + 철강봉 + RORG = 톤당 80만원
 
 P100이 발주할 때 → RORG 인포레코드 참조 → 80만원 자동 적용 ✅
-P200이 발주할 때 → RORG 인포레코드 참조 → 80만원 자동 적용 ✅
-```
+P200이 발주할 때 → RORG 인포레코드 참조 → 80만원 자동 적용 ✅</pre>
 
 ---
 
@@ -127,29 +110,23 @@ P200이 발주할 때 → RORG 인포레코드 참조 → 80만원 자동 적용
 
 ### ME11 초기 화면
 
-```
-Vendor        : 철강사 A
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">Vendor        : 철강사 A
 Material      : 철강봉
 Purch. Org.   : RORG        ← 여기에 RORG 코드 입력
 Info Category : (빈칸)      ← 구매 방식 선택 (RORG랑 무관)
-Plant         : (비워도 됨)
-```
+Plant         : (비워도 됨)</pre>
 
 ### Purch. Org. 필드에 뭘 넣느냐에 따라 결정됨
 
-```
-Purch. Org. = P100  →  P100 전용 인포레코드 (P100만 사용 가능)
-Purch. Org. = RORG  →  공유 인포레코드    (P100, P200 모두 사용 가능)
-```
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">Purch. Org. = P100  →  P100 전용 인포레코드 (P100만 사용 가능)
+Purch. Org. = RORG  →  공유 인포레코드    (P100, P200 모두 사용 가능)</pre>
 
 ### Info Category는 별개 개념 (구매 방식)
 
-```
-(빈칸) : 표준 구매
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">(빈칸) : 표준 구매
 K      : 위탁 (Consignment)
 L      : 하청 (Subcontracting)
-P      : Pipeline
-```
+P      : Pipeline</pre>
 
 ---
 
@@ -159,9 +136,9 @@ P      : Pipeline
 |------|------|-------------|
 | 역할 | 계약·단가 협상 전담 | 실제 발주 실행 |
 | 인포레코드 | 직접 생성 | RORG 것 참조 |
-| PO 생성 | ❌ 불가 | ✅ 가능 |
-| Plant 할당 | ❌ 없음 | ✅ 있음 |
-| Company Code 할당 | ❌ 없음 | ✅ 있음 |
+| PO 생성 | 불가 | 가능 |
+| Plant 할당 | 없음 | 있음 |
+| Company Code 할당 | 없음 | 있음 |
 
 > RORG = **"가격 협상 결과를 여러 구매조직이 공유하게 해주는 장치"**
 
@@ -169,12 +146,10 @@ P      : Pipeline
 
 ## 7. RORG 컨피그 설정 위치
 
-```
-SPRO 경로:
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">SPRO 경로:
 MM → Purchasing → Define Reference Purchasing Organization
 → P100에 RORG 할당
-→ P200에 RORG 할당
-```
+→ P200에 RORG 할당</pre>
 
 이렇게 설정하면 P100, P200이 발주할 때
 **RORG가 맺은 인포레코드/계약을 자동으로 참조**할 수 있다.
@@ -183,8 +158,7 @@ MM → Purchasing → Define Reference Purchasing Organization
 
 ## 8. 전체 구조 한눈에
 
-```
-RORG (본사 전략구매팀)
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">RORG (본사 전략구매팀)
   역할: 공급업체와 단가 협상, 인포레코드/계약 생성
   Plant 할당: 없음 / PO 생성: 불가
       │
@@ -202,19 +176,16 @@ RORG (본사 전략구매팀)
 구매그룹 (구매조직 안의 담당 팀)
   001팀: 철강 원자재 담당
   002팀: 전장부품 담당
-  003팀: MRO/소모품 담당
-```
+  003팀: MRO/소모품 담당</pre>
 
 ---
 
 ## 9. 핵심 요약
 
-```
-플랜트       =  재고/생산 단위
+<pre style="color:#000000; background:#f6f8fa; padding:16px; border-radius:6px; border:1px solid #e1e4e8; font-size:0.9em;">플랜트       =  재고/생산 단위
 구매조직     =  계약/발주 권한 단위
 중앙구매     =  구매조직 1개 → 여러 플랜트
 분산구매     =  구매조직 여러 개 → 각자 플랜트 1개
 인포레코드   =  공급업체 + 자재 + 구매조직 단위의 단가/조건 마스터
 RORG         =  인포레코드를 한 번만 만들어 여러 구매조직이 공유하는 장치
-ME11 설정    =  Purch. Org. 필드에 RORG 코드 입력하면 끝
-```
+ME11 설정    =  Purch. Org. 필드에 RORG 코드 입력하면 끝</pre>
