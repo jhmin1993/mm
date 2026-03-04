@@ -133,6 +133,25 @@ flowchart LR
     A["PR 생성"] --> B["승인 워크플로우"] --> C["소스 지정"] --> D["PO 전환"]
 ```
 
+### 1-1. 소스 결정 (Source Determination)
+
+PR 승인 후, SAP는 아래 순서로 공급업체를 자동 탐색한다.
+
+```
+Info Record → Source List → Quota Arrangement → Contract / Scheduling Agreement
+```
+
+| 도구 | 설명 | T-code |
+|------|------|--------|
+| Info Record | 자재-공급업체 단가·납기 조건 기록 | ME11 |
+| Source List | 특정 자재의 허가된 공급업체 목록 | ME01 |
+| Quota Arrangement | 복수 공급업체 간 발주 비율 분배 | MEQ1 |
+| Contract | 장기 구매 계약 (단가 고정) | ME31K |
+| Scheduling Agreement | 정기 납품 일정 계약 (JIT) | ME31L |
+
+> 소스가 자동으로 결정되면 RFQ 없이 바로 PO 전환 가능. ME57에서 소스 지정 후 PO 전환.
+{: .callout .callout-note}
+
 ### 2. RFQ - 견적 요청 (Request for Quotation)
 
 - **목적**: 공급업체에 가격 및 납기 조건 요청
@@ -156,6 +175,15 @@ flowchart LR
 **PO 구조:**
 - **헤더**: 공급업체, 통화, 지급 조건, 인코텀즈
 - **아이템**: 자재, 수량, 단가, 납기일, Plant
+
+**계정 지정 유형 (Account Assignment Category):**
+
+| 코드 | 유형 | 설명 |
+|------|------|------|
+| (없음) | 재고 자재 | GR 시 재고 계정 처리. 창고 입고 |
+| K | 코스트센터 | GR 시 비용 직처리. 재고 미발생 |
+| P | 프로젝트 | WBS Element에 비용 귀속 |
+| A | 자산 | 고정자산 계정으로 처리 |
 
 ### 4. GR - 입고 (Goods Receipt)
 
@@ -184,6 +212,22 @@ flowchart LR
 
 ---
 
+## GR/IR 계정 흐름 요약
+
+P2P 전 단계의 회계 처리를 한눈에 정리.
+
+| 단계 | 차변 (Dr) | 대변 (Cr) | 비고 |
+|------|----------|----------|------|
+| PO 생성 | - | - | 회계 전표 없음 (Commitment만 기록) |
+| GR 입고 | 재고 계정 (BSX) | GR/IR 정산 계정 (WRX) | 자재 문서 + 회계 전표 생성 |
+| IV 송장 | GR/IR 정산 계정 (WRX) | 공급업체 채무 (AP) | GR/IR 계정 상쇄 |
+| FI 지급 | 공급업체 채무 (AP) | 은행 계정 (Bank) | AP 잔액 소멸 |
+
+> GR/IR 계정은 GR과 IV가 완료되면 0이 되어야 정상이다. 잔액이 남으면 수량/금액 불일치를 의미.
+{: .callout .callout-note}
+
+---
+
 ## 주요 체크포인트
 
 | 단계 | 확인 사항 |
@@ -192,6 +236,21 @@ flowchart LR
 | PO→GR | PO 수량 대비 GR 수량 |
 | GR→IV | 3-way Matching 허용 오차 |
 | IV→지급 | 지급 조건 (Payment Terms) |
+
+---
+
+## P2P 주요 시나리오 비교
+
+표준 구매 외에 실무에서 자주 사용되는 P2P 변형 시나리오.
+
+| 시나리오 | 프로세스 흐름 | 주요 특징 |
+|---------|-------------|---------|
+| 표준 구매 | PR → RFQ → PO → GR → IV | 기본 프로세스 |
+| 계약 기반 | Contract(ME31K) → PO → GR → IV | RFQ 생략. 단가 고정 |
+| 스케줄링 어그리먼트 | SA(ME31L) → 납품 일정 → GR → IV | 정기 납품(JIT). 발주서 대신 납품 일정표 발행 |
+| 무재고 구매 | PO(K 계정지정) → GR → IV | GR 시 재고 미발생. 비용 직처리 |
+| 위탁 (Consignment) | 공급업체 재고 보관 → 출고 시 정산 | 입고 없이 사용 후 IV. 재고 위험 없음 |
+| STO (플랜트 간 이동) | UB PO → 출고(641) → 입고(101) | 내부 이동. 공급업체 없음. MM-FI 연동 |
 
 ---
 
